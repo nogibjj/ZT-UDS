@@ -7547,7 +7547,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_1926/1807107526.py:3: DeprecationWarning: 
+<pre>/tmp/ipykernel_1833/1807107526.py:3: DeprecationWarning: 
 Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
 (to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
 but was not found to be installed on your system.
@@ -7980,6 +7980,8 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
 
+
+<span class="n">subset</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s2">"age"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'int64'</span><span class="p">)</span>
 <span class="n">subset</span><span class="p">[</span><span class="s2">"age_sq"</span><span class="p">]</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">age</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">"yearly_income ~ female + age + age_sq"</span><span class="p">,</span> <span class="n">subset</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </pre></div>
@@ -7997,25 +7999,25 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.060</td>
+<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.083</td>
 </tr>
 <tr>
-<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.060</td>
+<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.083</td>
 </tr>
 <tr>
-<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   2625.</td>
+<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   3710.</td>
 </tr>
 <tr>
 <th>Date:</th> <td>Tue, 09 Apr 2024</td> <th>  Prob (F-statistic):</th> <td>  0.00</td>
 </tr>
 <tr>
-<th>Time:</th> <td>02:00:46</td> <th>  Log-Likelihood:    </th> <td>-1.4441e+06</td>
+<th>Time:</th> <td>03:19:17</td> <th>  Log-Likelihood:    </th> <td>-1.4426e+06</td>
 </tr>
 <tr>
-<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.888e+06</td>
+<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.885e+06</td>
 </tr>
 <tr>
-<th>Df Residuals:</th> <td>122599</td> <th>  BIC:               </th> <td>2.888e+06</td>
+<th>Df Residuals:</th> <td>122599</td> <th>  BIC:               </th> <td>2.885e+06</td>
 </tr>
 <tr>
 <th>Df Model:</th> <td>     3</td> <th> </th> <td> </td>
@@ -8029,32 +8031,32 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <td></td> <th>coef</th> <th>std err</th> <th>t</th> <th>P&gt;|t|</th> <th>[0.025</th> <th>0.975]</th>
 </tr>
 <tr>
-<th>Intercept</th> <td> 3.833e+04</td> <td>  315.241</td> <td>  121.587</td> <td> 0.000</td> <td> 3.77e+04</td> <td> 3.89e+04</td>
+<th>Intercept</th> <td>-7102.4067</td> <td>  878.728</td> <td>   -8.083</td> <td> 0.000</td> <td>-8824.700</td> <td>-5380.114</td>
 </tr>
 <tr>
-<th>female</th> <td>-1.062e+04</td> <td>  181.123</td> <td>  -58.641</td> <td> 0.000</td> <td> -1.1e+04</td> <td>-1.03e+04</td>
+<th>female</th> <td>-1.074e+04</td> <td>  178.919</td> <td>  -60.000</td> <td> 0.000</td> <td>-1.11e+04</td> <td>-1.04e+04</td>
 </tr>
 <tr>
-<th>age</th> <td>  456.6349</td> <td>    6.839</td> <td>   66.766</td> <td> 0.000</td> <td>  443.230</td> <td>  470.040</td>
+<th>age</th> <td> 2730.5944</td> <td>   41.676</td> <td>   65.519</td> <td> 0.000</td> <td> 2648.910</td> <td> 2812.279</td>
 </tr>
 <tr>
-<th>age_sq</th> <td>   -0.2740</td> <td>    1.241</td> <td>   -0.221</td> <td> 0.825</td> <td>   -2.706</td> <td>    2.158</td>
+<th>age_sq</th> <td>  -25.8227</td> <td>    0.467</td> <td>  -55.283</td> <td> 0.000</td> <td>  -26.738</td> <td>  -24.907</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-<th>Omnibus:</th> <td>18297.323</td> <th>  Durbin-Watson:     </th> <td>   1.733</td>
+<th>Omnibus:</th> <td>18004.695</td> <th>  Durbin-Watson:     </th> <td>   1.739</td>
 </tr>
 <tr>
-<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>27620.546</td>
+<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>27027.927</td>
 </tr>
 <tr>
-<th>Skew:</th> <td> 1.110</td> <th>  Prob(JB):          </th> <td>    0.00</td>
+<th>Skew:</th> <td> 1.096</td> <th>  Prob(JB):          </th> <td>    0.00</td>
 </tr>
 <tr>
-<th>Kurtosis:</th> <td> 3.692</td> <th>  Cond. No.          </th> <td>    269.</td>
+<th>Kurtosis:</th> <td> 3.699</td> <th>  Cond. No.          </th> <td>2.30e+04</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 2.3e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
 </div>
 </div>
 </div>
@@ -8127,25 +8129,25 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.259</td>
+<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.273</td>
 </tr>
 <tr>
-<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.259</td>
+<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.273</td>
 </tr>
 <tr>
-<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   8573.</td>
+<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   9195.</td>
 </tr>
 <tr>
 <th>Date:</th> <td>Tue, 09 Apr 2024</td> <th>  Prob (F-statistic):</th> <td>  0.00</td>
 </tr>
 <tr>
-<th>Time:</th> <td>02:00:46</td> <th>  Log-Likelihood:    </th> <td>-1.4296e+06</td>
+<th>Time:</th> <td>03:19:54</td> <th>  Log-Likelihood:    </th> <td>-1.4284e+06</td>
 </tr>
 <tr>
-<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.859e+06</td>
+<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.857e+06</td>
 </tr>
 <tr>
-<th>Df Residuals:</th> <td>122597</td> <th>  BIC:               </th> <td>2.859e+06</td>
+<th>Df Residuals:</th> <td>122597</td> <th>  BIC:               </th> <td>2.857e+06</td>
 </tr>
 <tr>
 <th>Df Model:</th> <td>     5</td> <th> </th> <td> </td>
@@ -8159,38 +8161,38 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <td></td> <th>coef</th> <th>std err</th> <th>t</th> <th>P&gt;|t|</th> <th>[0.025</th> <th>0.975]</th>
 </tr>
 <tr>
-<th>Intercept</th> <td> 1.579e+04</td> <td>  420.146</td> <td>   37.577</td> <td> 0.000</td> <td>  1.5e+04</td> <td> 1.66e+04</td>
+<th>Intercept</th> <td> -1.92e+04</td> <td>  839.427</td> <td>  -22.875</td> <td> 0.000</td> <td>-2.08e+04</td> <td>-1.76e+04</td>
 </tr>
 <tr>
-<th>high_school_grad[T.True]</th> <td> 1.373e+04</td> <td>  344.678</td> <td>   39.840</td> <td> 0.000</td> <td> 1.31e+04</td> <td> 1.44e+04</td>
+<th>high_school_grad[T.True]</th> <td>  1.37e+04</td> <td>  341.482</td> <td>   40.114</td> <td> 0.000</td> <td>  1.3e+04</td> <td> 1.44e+04</td>
 </tr>
 <tr>
-<th>BA_grad[T.True]</th> <td> 2.756e+04</td> <td>  167.116</td> <td>  164.937</td> <td> 0.000</td> <td> 2.72e+04</td> <td> 2.79e+04</td>
+<th>BA_grad[T.True]</th> <td> 2.695e+04</td> <td>  166.062</td> <td>  162.282</td> <td> 0.000</td> <td> 2.66e+04</td> <td> 2.73e+04</td>
 </tr>
 <tr>
-<th>female</th> <td>  -1.3e+04</td> <td>  161.440</td> <td>  -80.496</td> <td> 0.000</td> <td>-1.33e+04</td> <td>-1.27e+04</td>
+<th>female</th> <td>-1.304e+04</td> <td>  159.947</td> <td>  -81.518</td> <td> 0.000</td> <td>-1.34e+04</td> <td>-1.27e+04</td>
 </tr>
 <tr>
-<th>age</th> <td>  445.9737</td> <td>    6.074</td> <td>   73.426</td> <td> 0.000</td> <td>  434.069</td> <td>  457.878</td>
+<th>age</th> <td> 2210.0675</td> <td>   37.239</td> <td>   59.348</td> <td> 0.000</td> <td> 2137.079</td> <td> 2283.056</td>
 </tr>
 <tr>
-<th>age_sq</th> <td>   -0.3958</td> <td>    1.102</td> <td>   -0.359</td> <td> 0.719</td> <td>   -2.555</td> <td>    1.763</td>
+<th>age_sq</th> <td>  -20.0288</td> <td>    0.417</td> <td>  -47.990</td> <td> 0.000</td> <td>  -20.847</td> <td>  -19.211</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-<th>Omnibus:</th> <td>14257.428</td> <th>  Durbin-Watson:     </th> <td>   1.849</td>
+<th>Omnibus:</th> <td>14162.034</td> <th>  Durbin-Watson:     </th> <td>   1.851</td>
 </tr>
 <tr>
-<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>20565.673</td>
+<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>20366.744</td>
 </tr>
 <tr>
-<th>Skew:</th> <td> 0.890</td> <th>  Prob(JB):          </th> <td>    0.00</td>
+<th>Skew:</th> <td> 0.887</td> <th>  Prob(JB):          </th> <td>    0.00</td>
 </tr>
 <tr>
-<th>Kurtosis:</th> <td> 3.926</td> <th>  Cond. No.          </th> <td>    481.</td>
+<th>Kurtosis:</th> <td> 3.917</td> <th>  Cond. No.          </th> <td>2.50e+04</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 2.5e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
 </div>
 </div>
 </div>
@@ -8310,25 +8312,25 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.309</td>
+<th>Dep. Variable:</th> <td>yearly_income</td> <th>  R-squared:         </th> <td>   0.320</td>
 </tr>
 <tr>
-<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.308</td>
+<th>Model:</th> <td>OLS</td> <th>  Adj. R-squared:    </th> <td>   0.319</td>
 </tr>
 <tr>
-<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   208.0</td>
+<th>Method:</th> <td>Least Squares</td> <th>  F-statistic:       </th> <td>   218.9</td>
 </tr>
 <tr>
 <th>Date:</th> <td>Tue, 09 Apr 2024</td> <th>  Prob (F-statistic):</th> <td>  0.00</td>
 </tr>
 <tr>
-<th>Time:</th> <td>02:00:52</td> <th>  Log-Likelihood:    </th> <td>-1.4253e+06</td>
+<th>Time:</th> <td>03:20:07</td> <th>  Log-Likelihood:    </th> <td>-1.4243e+06</td>
 </tr>
 <tr>
-<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.851e+06</td>
+<th>No. Observations:</th> <td>122603</td> <th>  AIC:               </th> <td>2.849e+06</td>
 </tr>
 <tr>
-<th>Df Residuals:</th> <td>122339</td> <th>  BIC:               </th> <td>2.854e+06</td>
+<th>Df Residuals:</th> <td>122339</td> <th>  BIC:               </th> <td>2.852e+06</td>
 </tr>
 <tr>
 <th>Df Model:</th> <td>   263</td> <th> </th> <td> </td>
@@ -8342,815 +8344,815 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <td></td> <th>coef</th> <th>std err</th> <th>t</th> <th>P&gt;|t|</th> <th>[0.025</th> <th>0.975]</th>
 </tr>
 <tr>
-<th>Intercept</th> <td>   1.1e+04</td> <td> 1138.124</td> <td>    9.662</td> <td> 0.000</td> <td> 8766.093</td> <td> 1.32e+04</td>
+<th>Intercept</th> <td> -2.03e+04</td> <td> 1330.133</td> <td>  -15.258</td> <td> 0.000</td> <td>-2.29e+04</td> <td>-1.77e+04</td>
 </tr>
 <tr>
-<th>high_school_grad[T.True]</th> <td> 1.116e+04</td> <td>  342.325</td> <td>   32.593</td> <td> 0.000</td> <td> 1.05e+04</td> <td> 1.18e+04</td>
+<th>high_school_grad[T.True]</th> <td> 1.122e+04</td> <td>  339.591</td> <td>   33.051</td> <td> 0.000</td> <td> 1.06e+04</td> <td> 1.19e+04</td>
 </tr>
 <tr>
-<th>BA_grad[T.True]</th> <td> 2.484e+04</td> <td>  178.336</td> <td>  139.276</td> <td> 0.000</td> <td> 2.45e+04</td> <td> 2.52e+04</td>
+<th>BA_grad[T.True]</th> <td> 2.438e+04</td> <td>  177.203</td> <td>  137.604</td> <td> 0.000</td> <td>  2.4e+04</td> <td> 2.47e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Animal production (112)]</th> <td> -857.9634</td> <td> 1701.897</td> <td>   -0.504</td> <td> 0.614</td> <td>-4193.652</td> <td> 2477.726</td>
+<th>C(ind02)[T.Animal production (112)]</th> <td> -564.0145</td> <td> 1688.307</td> <td>   -0.334</td> <td> 0.738</td> <td>-3873.069</td> <td> 2745.040</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Forestry except logging (1131, 1132)]</th> <td>  923.8666</td> <td> 3722.793</td> <td>    0.248</td> <td> 0.804</td> <td>-6372.745</td> <td> 8220.478</td>
+<th>C(ind02)[T.Forestry except logging (1131, 1132)]</th> <td>  166.5881</td> <td> 3693.081</td> <td>    0.045</td> <td> 0.964</td> <td>-7071.789</td> <td> 7404.965</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Logging (1133)]</th> <td> 5656.2100</td> <td> 2999.270</td> <td>    1.886</td> <td> 0.059</td> <td> -222.309</td> <td> 1.15e+04</td>
+<th>C(ind02)[T.Logging (1133)]</th> <td> 5192.1331</td> <td> 2975.316</td> <td>    1.745</td> <td> 0.081</td> <td> -639.437</td> <td>  1.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Fishing, hunting, and trapping (114)]</th> <td> 3510.2980</td> <td> 4528.918</td> <td>    0.775</td> <td> 0.438</td> <td>-5366.306</td> <td> 1.24e+04</td>
+<th>C(ind02)[T.Fishing, hunting, and trapping (114)]</th> <td> 3436.9737</td> <td> 4492.725</td> <td>    0.765</td> <td> 0.444</td> <td>-5368.693</td> <td> 1.22e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Support activities for agriculture and forestry (115)]</th> <td> 6207.2024</td> <td> 2760.458</td> <td>    2.249</td> <td> 0.025</td> <td>  796.750</td> <td> 1.16e+04</td>
+<th>C(ind02)[T.Support activities for agriculture and forestry (115)]</th> <td> 5832.1722</td> <td> 2738.404</td> <td>    2.130</td> <td> 0.033</td> <td>  464.945</td> <td> 1.12e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Oil and gas extraction (211)]</th> <td> 3.392e+04</td> <td> 3072.516</td> <td>   11.040</td> <td> 0.000</td> <td> 2.79e+04</td> <td> 3.99e+04</td>
+<th>C(ind02)[T.Oil and gas extraction (211)]</th> <td> 3.303e+04</td> <td> 3048.017</td> <td>   10.835</td> <td> 0.000</td> <td> 2.71e+04</td> <td>  3.9e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Coal mining (2121)]</th> <td> 2.528e+04</td> <td> 2550.842</td> <td>    9.910</td> <td> 0.000</td> <td> 2.03e+04</td> <td> 3.03e+04</td>
+<th>C(ind02)[T.Coal mining (2121)]</th> <td> 2.416e+04</td> <td> 2530.580</td> <td>    9.549</td> <td> 0.000</td> <td> 1.92e+04</td> <td> 2.91e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Metal ore mining (2122)]</th> <td> 3.384e+04</td> <td> 4184.931</td> <td>    8.087</td> <td> 0.000</td> <td> 2.56e+04</td> <td>  4.2e+04</td>
+<th>C(ind02)[T.Metal ore mining (2122)]</th> <td> 3.269e+04</td> <td> 4151.541</td> <td>    7.874</td> <td> 0.000</td> <td> 2.46e+04</td> <td> 4.08e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Nonmetallic mineral mining and quarrying (2123)]</th> <td> 1.538e+04</td> <td> 2391.495</td> <td>    6.431</td> <td> 0.000</td> <td> 1.07e+04</td> <td> 2.01e+04</td>
+<th>C(ind02)[T.Nonmetallic mineral mining and quarrying (2123)]</th> <td> 1.474e+04</td> <td> 2372.427</td> <td>    6.211</td> <td> 0.000</td> <td> 1.01e+04</td> <td> 1.94e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Support activities for mining (213)]</th> <td> 2.773e+04</td> <td> 1513.225</td> <td>   18.325</td> <td> 0.000</td> <td> 2.48e+04</td> <td> 3.07e+04</td>
+<th>C(ind02)[T.Support activities for mining (213)]</th> <td> 2.689e+04</td> <td> 1501.212</td> <td>   17.912</td> <td> 0.000</td> <td> 2.39e+04</td> <td> 2.98e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Electric power generation, transmission and distribution (Pt. 2211)]</th> <td> 2.162e+04</td> <td> 1437.245</td> <td>   15.040</td> <td> 0.000</td> <td> 1.88e+04</td> <td> 2.44e+04</td>
+<th>C(ind02)[T.Electric power generation, transmission and distribution (Pt. 2211)]</th> <td> 2.068e+04</td> <td> 1425.911</td> <td>   14.506</td> <td> 0.000</td> <td> 1.79e+04</td> <td> 2.35e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Natural gas distribution (Pt.s2212)]</th> <td> 1.588e+04</td> <td> 2480.013</td> <td>    6.403</td> <td> 0.000</td> <td>  1.1e+04</td> <td> 2.07e+04</td>
+<th>C(ind02)[T.Natural gas distribution (Pt.s2212)]</th> <td> 1.517e+04</td> <td> 2460.202</td> <td>    6.168</td> <td> 0.000</td> <td> 1.04e+04</td> <td>    2e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Electric and gas, and other combinations (Pts. 2211, 2212)]</th> <td> 2.171e+04</td> <td> 2685.044</td> <td>    8.086</td> <td> 0.000</td> <td> 1.64e+04</td> <td>  2.7e+04</td>
+<th>C(ind02)[T.Electric and gas, and other combinations (Pts. 2211, 2212)]</th> <td> 2.042e+04</td> <td> 2663.725</td> <td>    7.665</td> <td> 0.000</td> <td> 1.52e+04</td> <td> 2.56e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Water, steam, air-conditioning, and irrigation systems (22131, 22133)]</th> <td> 5944.3370</td> <td> 1982.015</td> <td>    2.999</td> <td> 0.003</td> <td> 2059.620</td> <td> 9829.054</td>
+<th>C(ind02)[T.Water, steam, air-conditioning, and irrigation systems (22131, 22133)]</th> <td> 5500.9579</td> <td> 1966.201</td> <td>    2.798</td> <td> 0.005</td> <td> 1647.237</td> <td> 9354.679</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Sewage treatment facilities (22132)]</th> <td> 8219.6616</td> <td> 3000.599</td> <td>    2.739</td> <td> 0.006</td> <td> 2338.538</td> <td> 1.41e+04</td>
+<th>C(ind02)[T.Sewage treatment facilities (22132)]</th> <td> 6798.7334</td> <td> 2976.769</td> <td>    2.284</td> <td> 0.022</td> <td>  964.316</td> <td> 1.26e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Not specified utilities (Part of 22)]</th> <td> 1.986e+04</td> <td> 5880.719</td> <td>    3.377</td> <td> 0.001</td> <td> 8332.241</td> <td> 3.14e+04</td>
+<th>C(ind02)[T.Not specified utilities (Part of 22)]</th> <td> 1.904e+04</td> <td> 5833.742</td> <td>    3.263</td> <td> 0.001</td> <td> 7603.594</td> <td> 3.05e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Construction (23)]</th> <td> 1.056e+04</td> <td> 1126.250</td> <td>    9.372</td> <td> 0.000</td> <td> 8347.899</td> <td> 1.28e+04</td>
+<th>C(ind02)[T.** Construction (23)]</th> <td> 9797.4563</td> <td> 1117.377</td> <td>    8.768</td> <td> 0.000</td> <td> 7607.416</td> <td>  1.2e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Animal food, grain and oilseed milling (3111, 3112)]</th> <td>     1e+04</td> <td> 2351.456</td> <td>    4.254</td> <td> 0.000</td> <td> 5394.350</td> <td> 1.46e+04</td>
+<th>C(ind02)[T.Animal food, grain and oilseed milling (3111, 3112)]</th> <td> 8888.6307</td> <td> 2332.796</td> <td>    3.810</td> <td> 0.000</td> <td> 4316.389</td> <td> 1.35e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Sugar and confectionery products (3113)]</th> <td> 4619.8933</td> <td> 3087.078</td> <td>    1.497</td> <td> 0.135</td> <td>-1430.728</td> <td> 1.07e+04</td>
+<th>C(ind02)[T.Sugar and confectionery products (3113)]</th> <td> 4442.4336</td> <td> 3062.410</td> <td>    1.451</td> <td> 0.147</td> <td>-1559.838</td> <td> 1.04e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Fruit and vegetable preserving and specialty food manufacturing (3114)]</th> <td> 2238.7515</td> <td> 2458.725</td> <td>    0.911</td> <td> 0.363</td> <td>-2580.309</td> <td> 7057.812</td>
+<th>C(ind02)[T.Fruit and vegetable preserving and specialty food manufacturing (3114)]</th> <td> 1727.8722</td> <td> 2439.080</td> <td>    0.708</td> <td> 0.479</td> <td>-3052.683</td> <td> 6508.428</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Dairy product manufacturing (3115)]</th> <td> 6859.3658</td> <td> 2203.149</td> <td>    3.113</td> <td> 0.002</td> <td> 2541.231</td> <td> 1.12e+04</td>
+<th>C(ind02)[T.Dairy product manufacturing (3115)]</th> <td> 5567.1683</td> <td> 2185.733</td> <td>    2.547</td> <td> 0.011</td> <td> 1283.167</td> <td> 9851.169</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Animal slaughtering and processing (3116)]</th> <td>  313.8284</td> <td> 1545.695</td> <td>    0.203</td> <td> 0.839</td> <td>-2715.709</td> <td> 3343.366</td>
+<th>C(ind02)[T.Animal slaughtering and processing (3116)]</th> <td> -439.0029</td> <td> 1533.436</td> <td>   -0.286</td> <td> 0.775</td> <td>-3444.512</td> <td> 2566.506</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Retail bakeries (311811)]</th> <td>-1774.8294</td> <td> 2453.657</td> <td>   -0.723</td> <td> 0.469</td> <td>-6583.957</td> <td> 3034.298</td>
+<th>C(ind02)[T.Retail bakeries (311811)]</th> <td>-1822.6301</td> <td> 2434.049</td> <td>   -0.749</td> <td> 0.454</td> <td>-6593.326</td> <td> 2948.065</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Bakeries, except retail (3118 exc. 311811)]</th> <td> 2000.4588</td> <td> 2350.964</td> <td>    0.851</td> <td> 0.395</td> <td>-2607.392</td> <td> 6608.309</td>
+<th>C(ind02)[T.Bakeries, except retail (3118 exc. 311811)]</th> <td> 1231.6635</td> <td> 2332.240</td> <td>    0.528</td> <td> 0.597</td> <td>-3339.488</td> <td> 5802.815</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Seafood and other miscellaneous foods, n.e.c. (3117, 3119)]</th> <td> 9160.3042</td> <td> 2207.811</td> <td>    4.149</td> <td> 0.000</td> <td> 4833.031</td> <td> 1.35e+04</td>
+<th>C(ind02)[T.Seafood and other miscellaneous foods, n.e.c. (3117, 3119)]</th> <td> 7832.7829</td> <td> 2190.363</td> <td>    3.576</td> <td> 0.000</td> <td> 3539.707</td> <td> 1.21e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Not specified food industries (Part of 311)]</th> <td> 2859.0902</td> <td> 3663.846</td> <td>    0.780</td> <td> 0.435</td> <td>-4321.988</td> <td>    1e+04</td>
+<th>C(ind02)[T.Not specified food industries (Part of 311)]</th> <td> 1999.0102</td> <td> 3634.617</td> <td>    0.550</td> <td> 0.582</td> <td>-5124.779</td> <td> 9122.799</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Beverage manufacturing (3121)]</th> <td> 9058.7802</td> <td> 1956.764</td> <td>    4.629</td> <td> 0.000</td> <td> 5223.555</td> <td> 1.29e+04</td>
+<th>C(ind02)[T.Beverage manufacturing (3121)]</th> <td> 8436.0050</td> <td> 1941.169</td> <td>    4.346</td> <td> 0.000</td> <td> 4631.345</td> <td> 1.22e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Tobacco manufacturing (3122)]</th> <td>  1.29e+04</td> <td> 7325.887</td> <td>    1.761</td> <td> 0.078</td> <td>-1456.571</td> <td> 2.73e+04</td>
+<th>C(ind02)[T.Tobacco manufacturing (3122)]</th> <td> 1.088e+04</td> <td> 7267.445</td> <td>    1.497</td> <td> 0.134</td> <td>-3362.549</td> <td> 2.51e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Fiber, yarn, and thread mills (3131)]</th> <td> 5169.8050</td> <td> 8640.137</td> <td>    0.598</td> <td> 0.550</td> <td>-1.18e+04</td> <td> 2.21e+04</td>
+<th>C(ind02)[T.Fiber, yarn, and thread mills (3131)]</th> <td> 4366.4980</td> <td> 8571.106</td> <td>    0.509</td> <td> 0.610</td> <td>-1.24e+04</td> <td> 2.12e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Fabric mills, except knitting (3132 exc. 31324)]</th> <td> 3205.4471</td> <td> 3167.797</td> <td>    1.012</td> <td> 0.312</td> <td>-3003.383</td> <td> 9414.277</td>
+<th>C(ind02)[T.Fabric mills, except knitting (3132 exc. 31324)]</th> <td> 3330.6821</td> <td> 3142.480</td> <td>    1.060</td> <td> 0.289</td> <td>-2828.527</td> <td> 9489.891</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Textile and fabric finishing and coating mills (3133)]</th> <td>-2429.8272</td> <td> 8244.803</td> <td>   -0.295</td> <td> 0.768</td> <td>-1.86e+04</td> <td> 1.37e+04</td>
+<th>C(ind02)[T.Textile and fabric finishing and coating mills (3133)]</th> <td>  855.8525</td> <td> 8178.971</td> <td>    0.105</td> <td> 0.917</td> <td>-1.52e+04</td> <td> 1.69e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Carpet and rug mills (31411)]</th> <td> 1980.1664</td> <td> 3750.706</td> <td>    0.528</td> <td> 0.598</td> <td>-5371.155</td> <td> 9331.488</td>
+<th>C(ind02)[T.Carpet and rug mills (31411)]</th> <td> 1849.4567</td> <td> 3720.714</td> <td>    0.497</td> <td> 0.619</td> <td>-5443.081</td> <td> 9141.994</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Textile product mills, except carpets and rugs (314 exc. 31411)]</th> <td> 3206.0346</td> <td> 3374.183</td> <td>    0.950</td> <td> 0.342</td> <td>-3407.309</td> <td> 9819.378</td>
+<th>C(ind02)[T.Textile product mills, except carpets and rugs (314 exc. 31411)]</th> <td> 3395.3563</td> <td> 3347.220</td> <td>    1.014</td> <td> 0.310</td> <td>-3165.140</td> <td> 9955.853</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Knitting mills (31324, 3151)]</th> <td>-5465.8039</td> <td> 6312.874</td> <td>   -0.866</td> <td> 0.387</td> <td>-1.78e+04</td> <td> 6907.324</td>
+<th>C(ind02)[T.Knitting mills (31324, 3151)]</th> <td>-6715.3569</td> <td> 6262.459</td> <td>   -1.072</td> <td> 0.284</td> <td> -1.9e+04</td> <td> 5558.958</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Cut and sew apparel manufacturing (3152)]</th> <td> 3536.0852</td> <td> 2485.987</td> <td>    1.422</td> <td> 0.155</td> <td>-1336.409</td> <td> 8408.579</td>
+<th>C(ind02)[T.Cut and sew apparel manufacturing (3152)]</th> <td> 2618.6464</td> <td> 2466.207</td> <td>    1.062</td> <td> 0.288</td> <td>-2215.077</td> <td> 7452.370</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Apparel accessories and other apparel manufacturing (3159)]</th> <td> 1030.1607</td> <td> 9100.133</td> <td>    0.113</td> <td> 0.910</td> <td>-1.68e+04</td> <td> 1.89e+04</td>
+<th>C(ind02)[T.Apparel accessories and other apparel manufacturing (3159)]</th> <td> -452.6020</td> <td> 9027.429</td> <td>   -0.050</td> <td> 0.960</td> <td>-1.81e+04</td> <td> 1.72e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Footwear manufacturing (3162)]</th> <td> 1.478e+04</td> <td> 5328.848</td> <td>    2.774</td> <td> 0.006</td> <td> 4338.963</td> <td> 2.52e+04</td>
+<th>C(ind02)[T.Footwear manufacturing (3162)]</th> <td> 1.289e+04</td> <td> 5286.433</td> <td>    2.438</td> <td> 0.015</td> <td> 2525.557</td> <td> 2.32e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Leather tanning and products, except footwear manufacturing (3161, 3169)]</th> <td> 2374.0553</td> <td> 6157.364</td> <td>    0.386</td> <td> 0.700</td> <td>-9694.277</td> <td> 1.44e+04</td>
+<th>C(ind02)[T.Leather tanning and products, except footwear manufacturing (3161, 3169)]</th> <td>  421.0009</td> <td> 6108.307</td> <td>    0.069</td> <td> 0.945</td> <td>-1.16e+04</td> <td> 1.24e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Pulp, paper, and paperboard mills (3221)]</th> <td> 1.264e+04</td> <td> 2106.098</td> <td>    6.001</td> <td> 0.000</td> <td> 8510.136</td> <td> 1.68e+04</td>
+<th>C(ind02)[T.Pulp, paper, and paperboard mills (3221)]</th> <td> 1.165e+04</td> <td> 2089.383</td> <td>    5.577</td> <td> 0.000</td> <td> 7558.154</td> <td> 1.57e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Paperboard containers and boxes (32221)]</th> <td> 6252.9113</td> <td> 3000.065</td> <td>    2.084</td> <td> 0.037</td> <td>  372.834</td> <td> 1.21e+04</td>
+<th>C(ind02)[T.Paperboard containers and boxes (32221)]</th> <td> 5036.6019</td> <td> 2976.215</td> <td>    1.692</td> <td> 0.091</td> <td> -796.730</td> <td> 1.09e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous paper and pulp products (32222,32223, 32229)]</th> <td> 7723.9346</td> <td> 3395.911</td> <td>    2.274</td> <td> 0.023</td> <td> 1068.006</td> <td> 1.44e+04</td>
+<th>C(ind02)[T.Miscellaneous paper and pulp products (32222,32223, 32229)]</th> <td> 6355.2800</td> <td> 3368.895</td> <td>    1.886</td> <td> 0.059</td> <td> -247.698</td> <td>  1.3e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Printing and related support activities (3231)]</th> <td> 3648.2945</td> <td> 1712.899</td> <td>    2.130</td> <td> 0.033</td> <td>  291.041</td> <td> 7005.548</td>
+<th>C(ind02)[T.Printing and related support activities (3231)]</th> <td> 2779.3316</td> <td> 1699.323</td> <td>    1.636</td> <td> 0.102</td> <td> -551.312</td> <td> 6109.976</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Petroleum refining (32411)]</th> <td> 2.739e+04</td> <td> 2234.392</td> <td>   12.258</td> <td> 0.000</td> <td>  2.3e+04</td> <td> 3.18e+04</td>
+<th>C(ind02)[T.Petroleum refining (32411)]</th> <td> 2.603e+04</td> <td> 2216.743</td> <td>   11.742</td> <td> 0.000</td> <td> 2.17e+04</td> <td> 3.04e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous petroleum and coal products (32419)]</th> <td> 8945.7389</td> <td> 5426.048</td> <td>    1.649</td> <td> 0.099</td> <td>-1689.225</td> <td> 1.96e+04</td>
+<th>C(ind02)[T.Miscellaneous petroleum and coal products (32419)]</th> <td> 9663.8760</td> <td> 5382.710</td> <td>    1.795</td> <td> 0.073</td> <td> -886.146</td> <td> 2.02e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Resin, synthetic rubber and fibers, and filaments manufacturing (3252)]</th> <td> 7943.2560</td> <td> 2408.706</td> <td>    3.298</td> <td> 0.001</td> <td> 3222.232</td> <td> 1.27e+04</td>
+<th>C(ind02)[T.Resin, synthetic rubber and fibers, and filaments manufacturing (3252)]</th> <td> 6736.4353</td> <td> 2389.610</td> <td>    2.819</td> <td> 0.005</td> <td> 2052.839</td> <td> 1.14e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Agricultural chemical manufacturing (3253)]</th> <td> 1.754e+04</td> <td> 4474.945</td> <td>    3.919</td> <td> 0.000</td> <td> 8765.223</td> <td> 2.63e+04</td>
+<th>C(ind02)[T.Agricultural chemical manufacturing (3253)]</th> <td> 1.661e+04</td> <td> 4439.198</td> <td>    3.742</td> <td> 0.000</td> <td> 7911.289</td> <td> 2.53e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Pharmaceutical and medicine manufacturing (3254)]</th> <td> 2.377e+04</td> <td> 1600.000</td> <td>   14.859</td> <td> 0.000</td> <td> 2.06e+04</td> <td> 2.69e+04</td>
+<th>C(ind02)[T.Pharmaceutical and medicine manufacturing (3254)]</th> <td> 2.259e+04</td> <td> 1587.437</td> <td>   14.231</td> <td> 0.000</td> <td> 1.95e+04</td> <td> 2.57e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Paint, coating, and adhesive manufacturing B46 (3255)]</th> <td> 1.586e+04</td> <td> 3584.320</td> <td>    4.424</td> <td> 0.000</td> <td> 8831.322</td> <td> 2.29e+04</td>
+<th>C(ind02)[T.Paint, coating, and adhesive manufacturing B46 (3255)]</th> <td> 1.464e+04</td> <td> 3555.731</td> <td>    4.117</td> <td> 0.000</td> <td> 7670.655</td> <td> 2.16e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Soap, cleaning compound, and cosmetics manufacturing (3256)]</th> <td> 1.137e+04</td> <td> 2837.464</td> <td>    4.007</td> <td> 0.000</td> <td> 5809.573</td> <td> 1.69e+04</td>
+<th>C(ind02)[T.Soap, cleaning compound, and cosmetics manufacturing (3256)]</th> <td> 1.066e+04</td> <td> 2814.833</td> <td>    3.785</td> <td> 0.000</td> <td> 5138.293</td> <td> 1.62e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Industrial and miscellaneous chemicals (3251, 3259)]</th> <td> 1.824e+04</td> <td> 1689.131</td> <td>   10.796</td> <td> 0.000</td> <td> 1.49e+04</td> <td> 2.15e+04</td>
+<th>C(ind02)[T.Industrial and miscellaneous chemicals (3251, 3259)]</th> <td> 1.719e+04</td> <td> 1675.797</td> <td>   10.258</td> <td> 0.000</td> <td> 1.39e+04</td> <td> 2.05e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Plastics product manufacturing (3261)]</th> <td> 4034.0463</td> <td> 1804.933</td> <td>    2.235</td> <td> 0.025</td> <td>  496.407</td> <td> 7571.686</td>
+<th>C(ind02)[T.Plastics product manufacturing (3261)]</th> <td> 3290.3215</td> <td> 1790.580</td> <td>    1.838</td> <td> 0.066</td> <td> -219.185</td> <td> 6799.828</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Tire manufacturing (32621)]</th> <td> 1.298e+04</td> <td> 3637.285</td> <td>    3.570</td> <td> 0.000</td> <td> 5854.919</td> <td> 2.01e+04</td>
+<th>C(ind02)[T.Tire manufacturing (32621)]</th> <td> 1.184e+04</td> <td> 3608.256</td> <td>    3.280</td> <td> 0.001</td> <td> 4763.648</td> <td> 1.89e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Rubber products, except tires, manufacturing (32622, 32629)]</th> <td> 3975.2268</td> <td> 3134.628</td> <td>    1.268</td> <td> 0.205</td> <td>-2168.593</td> <td> 1.01e+04</td>
+<th>C(ind02)[T.Rubber products, except tires, manufacturing (32622, 32629)]</th> <td> 4234.7301</td> <td> 3109.583</td> <td>    1.362</td> <td> 0.173</td> <td>-1860.001</td> <td> 1.03e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Pottery, ceramics, and related products manufacturing (32711)]</th> <td> 2984.4031</td> <td> 6013.897</td> <td>    0.496</td> <td> 0.620</td> <td>-8802.735</td> <td> 1.48e+04</td>
+<th>C(ind02)[T.Pottery, ceramics, and related products manufacturing (32711)]</th> <td> 2878.7100</td> <td> 5965.794</td> <td>    0.483</td> <td> 0.629</td> <td>-8814.147</td> <td> 1.46e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Structural clay product manufacturing (32712)]</th> <td>-2829.7680</td> <td> 5638.275</td> <td>   -0.502</td> <td> 0.616</td> <td>-1.39e+04</td> <td> 8221.158</td>
+<th>C(ind02)[T.Structural clay product manufacturing (32712)]</th> <td>-4350.3343</td> <td> 5593.317</td> <td>   -0.778</td> <td> 0.437</td> <td>-1.53e+04</td> <td> 6612.474</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Glass and glass product manufacturing (3272)]</th> <td> 2191.7411</td> <td> 2614.267</td> <td>    0.838</td> <td> 0.402</td> <td>-2932.179</td> <td> 7315.661</td>
+<th>C(ind02)[T.Glass and glass product manufacturing (3272)]</th> <td> 1323.9040</td> <td> 2593.447</td> <td>    0.510</td> <td> 0.610</td> <td>-3759.210</td> <td> 6407.018</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Cement, concrete, lime, and gypsum product manufacturing (3273, 3274)]</th> <td> 6765.1364</td> <td> 2187.080</td> <td>    3.093</td> <td> 0.002</td> <td> 2478.496</td> <td> 1.11e+04</td>
+<th>C(ind02)[T.Cement, concrete, lime, and gypsum product manufacturing (3273, 3274)]</th> <td> 5872.9473</td> <td> 2169.663</td> <td>    2.707</td> <td> 0.007</td> <td> 1620.444</td> <td> 1.01e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous nonmetallic mineral product manufacturing (3279)]</th> <td> 3390.5201</td> <td> 3013.413</td> <td>    1.125</td> <td> 0.261</td> <td>-2515.720</td> <td> 9296.760</td>
+<th>C(ind02)[T.Miscellaneous nonmetallic mineral product manufacturing (3279)]</th> <td> 2024.9613</td> <td> 2989.466</td> <td>    0.677</td> <td> 0.498</td> <td>-3834.343</td> <td> 7884.265</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Iron and steel mills and steel product manufacturing (3311, 3312)]</th> <td> 1.098e+04</td> <td> 1963.280</td> <td>    5.593</td> <td> 0.000</td> <td> 7132.298</td> <td> 1.48e+04</td>
+<th>C(ind02)[T.Iron and steel mills and steel product manufacturing (3311, 3312)]</th> <td> 1.025e+04</td> <td> 1947.647</td> <td>    5.265</td> <td> 0.000</td> <td> 6436.582</td> <td> 1.41e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Aluminum production and processing (3313)]</th> <td> 1.307e+04</td> <td> 3558.601</td> <td>    3.674</td> <td> 0.000</td> <td> 6098.082</td> <td>    2e+04</td>
+<th>C(ind02)[T.Aluminum production and processing (3313)]</th> <td> 1.202e+04</td> <td> 3530.230</td> <td>    3.404</td> <td> 0.001</td> <td> 5098.647</td> <td> 1.89e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Nonferrous metal, except aluminum, production and processing (3314)]</th> <td> 9701.8019</td> <td> 3984.849</td> <td>    2.435</td> <td> 0.015</td> <td> 1891.565</td> <td> 1.75e+04</td>
+<th>C(ind02)[T.Nonferrous metal, except aluminum, production and processing (3314)]</th> <td> 8501.2462</td> <td> 3953.087</td> <td>    2.151</td> <td> 0.032</td> <td>  753.261</td> <td> 1.62e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Foundries (3315)]</th> <td> 5445.2055</td> <td> 3417.223</td> <td>    1.593</td> <td> 0.111</td> <td>-1252.495</td> <td> 1.21e+04</td>
+<th>C(ind02)[T.Foundries (3315)]</th> <td> 4398.0475</td> <td> 3389.992</td> <td>    1.297</td> <td> 0.195</td> <td>-2246.281</td> <td>  1.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Metal forgings and stampings (3321)]</th> <td> 1715.0691</td> <td> 3721.741</td> <td>    0.461</td> <td> 0.645</td> <td>-5579.481</td> <td> 9009.619</td>
+<th>C(ind02)[T.Metal forgings and stampings (3321)]</th> <td>  263.1538</td> <td> 3692.139</td> <td>    0.071</td> <td> 0.943</td> <td>-6973.377</td> <td> 7499.684</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Cutlery and hand tool manufacturing (3322)]</th> <td> 8808.3925</td> <td> 4913.272</td> <td>    1.793</td> <td> 0.073</td> <td> -821.539</td> <td> 1.84e+04</td>
+<th>C(ind02)[T.Cutlery and hand tool manufacturing (3322)]</th> <td> 8735.1012</td> <td> 4874.007</td> <td>    1.792</td> <td> 0.073</td> <td> -817.871</td> <td> 1.83e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Structural metals, and tank and shipping container manufacturing (3323, 3324)]</th> <td> 7136.9478</td> <td> 1831.804</td> <td>    3.896</td> <td> 0.000</td> <td> 3546.641</td> <td> 1.07e+04</td>
+<th>C(ind02)[T.Structural metals, and tank and shipping container manufacturing (3323, 3324)]</th> <td> 6678.8519</td> <td> 1817.189</td> <td>    3.675</td> <td> 0.000</td> <td> 3117.191</td> <td> 1.02e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Machine shops; turned product; screw, nut and bolt manufacturing (3327)]</th> <td> 3821.6903</td> <td> 1968.136</td> <td>    1.942</td> <td> 0.052</td> <td>  -35.824</td> <td> 7679.204</td>
+<th>C(ind02)[T.Machine shops; turned product; screw, nut and bolt manufacturing (3327)]</th> <td> 3385.7986</td> <td> 1952.428</td> <td>    1.734</td> <td> 0.083</td> <td> -440.929</td> <td> 7212.526</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Coating, engraving, heat treating and allied activities (3328)]</th> <td> 5874.3997</td> <td> 3353.101</td> <td>    1.752</td> <td> 0.080</td> <td> -697.623</td> <td> 1.24e+04</td>
+<th>C(ind02)[T.Coating, engraving, heat treating and allied activities (3328)]</th> <td> 5855.0291</td> <td> 3326.304</td> <td>    1.760</td> <td> 0.078</td> <td> -664.472</td> <td> 1.24e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Ordnance (332992 to 332995)]</th> <td> 1.139e+04</td> <td> 3395.981</td> <td>    3.355</td> <td> 0.001</td> <td> 4738.487</td> <td> 1.81e+04</td>
+<th>C(ind02)[T.Ordnance (332992 to 332995)]</th> <td> 1.067e+04</td> <td> 3368.881</td> <td>    3.168</td> <td> 0.002</td> <td> 4069.801</td> <td> 1.73e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous fabricated metal products manufacturing (3325, 3326, 3329 exc. 332992, 332993, 332994, 332995)]</th> <td> 5931.6094</td> <td> 1880.960</td> <td>    3.154</td> <td> 0.002</td> <td> 2244.958</td> <td> 9618.261</td>
+<th>C(ind02)[T.Miscellaneous fabricated metal products manufacturing (3325, 3326, 3329 exc. 332992, 332993, 332994, 332995)]</th> <td> 5226.9758</td> <td> 1865.973</td> <td>    2.801</td> <td> 0.005</td> <td> 1569.699</td> <td> 8884.252</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Not specified metal industries (Part of 331 and 332)]</th> <td> 4324.5660</td> <td> 6013.300</td> <td>    0.719</td> <td> 0.472</td> <td>-7461.402</td> <td> 1.61e+04</td>
+<th>C(ind02)[T.Not specified metal industries (Part of 331 and 332)]</th> <td> 2295.6997</td> <td> 5965.418</td> <td>    0.385</td> <td> 0.700</td> <td>-9396.420</td> <td>  1.4e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Agricultural implement manufacturing (33311)]</th> <td> 1.009e+04</td> <td> 2528.560</td> <td>    3.990</td> <td> 0.000</td> <td> 5132.472</td> <td>  1.5e+04</td>
+<th>C(ind02)[T.Agricultural implement manufacturing (33311)]</th> <td> 8922.9439</td> <td> 2508.462</td> <td>    3.557</td> <td> 0.000</td> <td> 4006.401</td> <td> 1.38e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Construction, mining and oil field machinery manufacturing (33312, 33313)]</th> <td> 1.421e+04</td> <td> 2319.973</td> <td>    6.126</td> <td> 0.000</td> <td> 9664.880</td> <td> 1.88e+04</td>
+<th>C(ind02)[T.Construction, mining and oil field machinery manufacturing (33312, 33313)]</th> <td> 1.322e+04</td> <td> 2301.540</td> <td>    5.744</td> <td> 0.000</td> <td> 8708.483</td> <td> 1.77e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.3095.0]</th> <td> 1.177e+04</td> <td> 3463.039</td> <td>    3.399</td> <td> 0.001</td> <td> 4982.577</td> <td> 1.86e+04</td>
+<th>C(ind02)[T.3095.0]</th> <td> 1.088e+04</td> <td> 3435.421</td> <td>    3.167</td> <td> 0.002</td> <td> 4145.929</td> <td> 1.76e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Metalworking machinery manufacturing (3335)]</th> <td> 6886.4830</td> <td> 2648.915</td> <td>    2.600</td> <td> 0.009</td> <td> 1694.653</td> <td> 1.21e+04</td>
+<th>C(ind02)[T.Metalworking machinery manufacturing (3335)]</th> <td> 5886.7804</td> <td> 2627.834</td> <td>    2.240</td> <td> 0.025</td> <td>  736.270</td> <td>  1.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Engines, turbines, and power transmission equipment manufacturing (3336)]</th> <td> 8186.2951</td> <td> 3879.288</td> <td>    2.110</td> <td> 0.035</td> <td>  582.955</td> <td> 1.58e+04</td>
+<th>C(ind02)[T.Engines, turbines, and power transmission equipment manufacturing (3336)]</th> <td> 7405.6169</td> <td> 3848.318</td> <td>    1.924</td> <td> 0.054</td> <td> -137.023</td> <td> 1.49e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Machinery manufacturing, n.e.c. (3332, 3334, 3339)]</th> <td> 9758.8177</td> <td> 1508.837</td> <td>    6.468</td> <td> 0.000</td> <td> 6801.522</td> <td> 1.27e+04</td>
+<th>C(ind02)[T.Machinery manufacturing, n.e.c. (3332, 3334, 3339)]</th> <td> 8792.4185</td> <td> 1496.937</td> <td>    5.874</td> <td> 0.000</td> <td> 5858.447</td> <td> 1.17e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.3365.0]</th> <td> 2.389e+04</td> <td> 2296.626</td> <td>   10.404</td> <td> 0.000</td> <td> 1.94e+04</td> <td> 2.84e+04</td>
+<th>C(ind02)[T.3365.0]</th> <td>  2.31e+04</td> <td> 2278.335</td> <td>   10.140</td> <td> 0.000</td> <td> 1.86e+04</td> <td> 2.76e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Communications, audio, and video equipment manufacturing (3342, 3343)]</th> <td> 1.728e+04</td> <td> 2782.801</td> <td>    6.209</td> <td> 0.000</td> <td> 1.18e+04</td> <td> 2.27e+04</td>
+<th>C(ind02)[T.Communications, audio, and video equipment manufacturing (3342, 3343)]</th> <td>   1.7e+04</td> <td> 2760.569</td> <td>    6.157</td> <td> 0.000</td> <td> 1.16e+04</td> <td> 2.24e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Navigational, measuring, electromedical, and control instruments manufacturing (3345)]</th> <td> 1.876e+04</td> <td> 2124.376</td> <td>    8.831</td> <td> 0.000</td> <td> 1.46e+04</td> <td> 2.29e+04</td>
+<th>C(ind02)[T.Navigational, measuring, electromedical, and control instruments manufacturing (3345)]</th> <td> 1.801e+04</td> <td> 2107.461</td> <td>    8.545</td> <td> 0.000</td> <td> 1.39e+04</td> <td> 2.21e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Electronic component and product manufacturing, n.e.c. (3344, 3346)]</th> <td> 1.893e+04</td> <td> 1535.546</td> <td>   12.329</td> <td> 0.000</td> <td> 1.59e+04</td> <td> 2.19e+04</td>
+<th>C(ind02)[T.Electronic component and product manufacturing, n.e.c. (3344, 3346)]</th> <td> 1.797e+04</td> <td> 1523.425</td> <td>   11.794</td> <td> 0.000</td> <td>  1.5e+04</td> <td>  2.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Household appliance manufacturing (3352)]</th> <td> 9869.3063</td> <td> 3353.826</td> <td>    2.943</td> <td> 0.003</td> <td> 3295.862</td> <td> 1.64e+04</td>
+<th>C(ind02)[T.Household appliance manufacturing (3352)]</th> <td> 9110.2574</td> <td> 3327.063</td> <td>    2.738</td> <td> 0.006</td> <td> 2589.269</td> <td> 1.56e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Electrical lighting, equipment, and supplies manufacturing, n.e.c. (3351, 3353, 3359)]</th> <td> 1.092e+04</td> <td> 1853.909</td> <td>    5.889</td> <td> 0.000</td> <td> 7284.789</td> <td> 1.46e+04</td>
+<th>C(ind02)[T.Electrical lighting, equipment, and supplies manufacturing, n.e.c. (3351, 3353, 3359)]</th> <td> 1.037e+04</td> <td> 1839.104</td> <td>    5.639</td> <td> 0.000</td> <td> 6766.230</td> <td>  1.4e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Motor vehicles and motor vehicle equipment manufacturing (3361, 3362, 3363)]</th> <td> 8944.8727</td> <td> 1319.334</td> <td>    6.780</td> <td> 0.000</td> <td> 6359.000</td> <td> 1.15e+04</td>
+<th>C(ind02)[T.Motor vehicles and motor vehicle equipment manufacturing (3361, 3362, 3363)]</th> <td> 8251.4850</td> <td> 1308.878</td> <td>    6.304</td> <td> 0.000</td> <td> 5686.107</td> <td> 1.08e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Aircraft and parts manufacturing (336411 to 336413)]</th> <td> 1.999e+04</td> <td> 1454.798</td> <td>   13.743</td> <td> 0.000</td> <td> 1.71e+04</td> <td> 2.28e+04</td>
+<th>C(ind02)[T.Aircraft and parts manufacturing (336411 to 336413)]</th> <td> 1.938e+04</td> <td> 1443.230</td> <td>   13.426</td> <td> 0.000</td> <td> 1.65e+04</td> <td> 2.22e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Aerospace products and parts manufacturing (336414, 336415, 336419)]</th> <td> 2.932e+04</td> <td> 3846.768</td> <td>    7.622</td> <td> 0.000</td> <td> 2.18e+04</td> <td> 3.69e+04</td>
+<th>C(ind02)[T.Aerospace products and parts manufacturing (336414, 336415, 336419)]</th> <td> 2.805e+04</td> <td> 3816.129</td> <td>    7.351</td> <td> 0.000</td> <td> 2.06e+04</td> <td> 3.55e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Railroad rolling stock manufacturing (3365)]</th> <td> 1.102e+04</td> <td> 5066.910</td> <td>    2.174</td> <td> 0.030</td> <td> 1084.983</td> <td> 2.09e+04</td>
+<th>C(ind02)[T.Railroad rolling stock manufacturing (3365)]</th> <td> 9948.7869</td> <td> 5026.445</td> <td>    1.979</td> <td> 0.048</td> <td>   97.039</td> <td> 1.98e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Ship and boat building (3366)]</th> <td> 1.141e+04</td> <td> 2207.779</td> <td>    5.166</td> <td> 0.000</td> <td> 7078.222</td> <td> 1.57e+04</td>
+<th>C(ind02)[T.Ship and boat building (3366)]</th> <td> 1.086e+04</td> <td> 2190.169</td> <td>    4.960</td> <td> 0.000</td> <td> 6569.615</td> <td> 1.52e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other transportation equipment manufacturing (3369)]</th> <td>  551.8638</td> <td> 4587.002</td> <td>    0.120</td> <td> 0.904</td> <td>-8438.584</td> <td> 9542.312</td>
+<th>C(ind02)[T.Other transportation equipment manufacturing (3369)]</th> <td>  -13.4994</td> <td> 4550.298</td> <td>   -0.003</td> <td> 0.998</td> <td>-8932.009</td> <td> 8905.010</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Sawmills and wood preservation (3211)]</th> <td> 4960.2021</td> <td> 2367.111</td> <td>    2.095</td> <td> 0.036</td> <td>  320.705</td> <td> 9599.700</td>
+<th>C(ind02)[T.Sawmills and wood preservation (3211)]</th> <td> 4626.5571</td> <td> 2348.192</td> <td>    1.970</td> <td> 0.049</td> <td>   24.139</td> <td> 9228.975</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Veneer, plywood, and engineered wood products (3212)]</th> <td> 5189.9036</td> <td> 4529.115</td> <td>    1.146</td> <td> 0.252</td> <td>-3687.087</td> <td> 1.41e+04</td>
+<th>C(ind02)[T.Veneer, plywood, and engineered wood products (3212)]</th> <td> 4240.9486</td> <td> 4492.971</td> <td>    0.944</td> <td> 0.345</td> <td>-4565.199</td> <td>  1.3e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Prefabricated wood buildings and mobile homes (321991, 321992)]</th> <td> 5435.6788</td> <td> 4140.835</td> <td>    1.313</td> <td> 0.189</td> <td>-2680.288</td> <td> 1.36e+04</td>
+<th>C(ind02)[T.Prefabricated wood buildings and mobile homes (321991, 321992)]</th> <td> 4746.9654</td> <td> 4107.771</td> <td>    1.156</td> <td> 0.248</td> <td>-3304.197</td> <td> 1.28e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.3875.0]</th> <td> 3523.3936</td> <td> 2236.979</td> <td>    1.575</td> <td> 0.115</td> <td> -861.047</td> <td> 7907.834</td>
+<th>C(ind02)[T.3875.0]</th> <td> 2671.1141</td> <td> 2219.177</td> <td>    1.204</td> <td> 0.229</td> <td>-1678.437</td> <td> 7020.665</td>
 </tr>
 <tr>
-<th>C(ind02)[T.3895.0]</th> <td> 2156.9836</td> <td> 1762.816</td> <td>    1.224</td> <td> 0.221</td> <td>-1298.106</td> <td> 5612.073</td>
+<th>C(ind02)[T.3895.0]</th> <td> 1367.1176</td> <td> 1748.818</td> <td>    0.782</td> <td> 0.434</td> <td>-2060.537</td> <td> 4794.772</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Medical equipment and supplies manufacturing (3391)]</th> <td> 1.411e+04</td> <td> 1565.907</td> <td>    9.013</td> <td> 0.000</td> <td>  1.1e+04</td> <td> 1.72e+04</td>
+<th>C(ind02)[T.Medical equipment and supplies manufacturing (3391)]</th> <td> 1.333e+04</td> <td> 1553.491</td> <td>    8.582</td> <td> 0.000</td> <td> 1.03e+04</td> <td> 1.64e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Toys, amusement, and sporting goods manufacturing (33992, 33993)]</th> <td> 2138.4970</td> <td> 2826.559</td> <td>    0.757</td> <td> 0.449</td> <td>-3401.511</td> <td> 7678.505</td>
+<th>C(ind02)[T.Toys, amusement, and sporting goods manufacturing (33992, 33993)]</th> <td> 1521.5928</td> <td> 2804.004</td> <td>    0.543</td> <td> 0.587</td> <td>-3974.208</td> <td> 7017.394</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous manufacturing, n.e.c. (3399 exc. 33992, 33993)]</th> <td> 4899.8913</td> <td> 1693.530</td> <td>    2.893</td> <td> 0.004</td> <td> 1580.601</td> <td> 8219.181</td>
+<th>C(ind02)[T.Miscellaneous manufacturing, n.e.c. (3399 exc. 33992, 33993)]</th> <td> 4371.6811</td> <td> 1680.033</td> <td>    2.602</td> <td> 0.009</td> <td> 1078.844</td> <td> 7664.518</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Not specified manufacturing industries (Part of 31, 32, 33)]</th> <td> 2872.9191</td> <td> 2059.422</td> <td>    1.395</td> <td> 0.163</td> <td>-1163.514</td> <td> 6909.353</td>
+<th>C(ind02)[T.Not specified manufacturing industries (Part of 31, 32, 33)]</th> <td> 3027.6062</td> <td> 2042.943</td> <td>    1.482</td> <td> 0.138</td> <td> -976.527</td> <td> 7031.740</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Motor vehicles, parts and supplies, merchant wholesalers (*4231)]</th> <td> 8269.6204</td> <td> 2427.674</td> <td>    3.406</td> <td> 0.001</td> <td> 3511.419</td> <td>  1.3e+04</td>
+<th>C(ind02)[T.** Motor vehicles, parts and supplies, merchant wholesalers (*4231)]</th> <td> 7757.9377</td> <td> 2408.296</td> <td>    3.221</td> <td> 0.001</td> <td> 3037.717</td> <td> 1.25e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Furniture and home furnishing, merchant wholesalers (*4232)]</th> <td> 2706.7603</td> <td> 3878.940</td> <td>    0.698</td> <td> 0.485</td> <td>-4895.897</td> <td> 1.03e+04</td>
+<th>C(ind02)[T.** Furniture and home furnishing, merchant wholesalers (*4232)]</th> <td> 1868.1341</td> <td> 3847.984</td> <td>    0.485</td> <td> 0.627</td> <td>-5673.851</td> <td> 9410.119</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Lumber and other construction materials, merchant wholesalers (*4233)]</th> <td> 7793.7344</td> <td> 2415.170</td> <td>    3.227</td> <td> 0.001</td> <td> 3060.042</td> <td> 1.25e+04</td>
+<th>C(ind02)[T.** Lumber and other construction materials, merchant wholesalers (*4233)]</th> <td> 7390.6681</td> <td> 2395.860</td> <td>    3.085</td> <td> 0.002</td> <td> 2694.822</td> <td> 1.21e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Professional and commercial equipment and supplies, merchant wholesalers (*4234)]</th> <td> 1.616e+04</td> <td> 1896.737</td> <td>    8.519</td> <td> 0.000</td> <td> 1.24e+04</td> <td> 1.99e+04</td>
+<th>C(ind02)[T.** Professional and commercial equipment and supplies, merchant wholesalers (*4234)]</th> <td> 1.514e+04</td> <td> 1881.715</td> <td>    8.047</td> <td> 0.000</td> <td> 1.15e+04</td> <td> 1.88e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Metals and minerals, except petroleum, merchant wholesalers (*4235)]</th> <td> -820.2031</td> <td> 4274.842</td> <td>   -0.192</td> <td> 0.848</td> <td>-9198.823</td> <td> 7558.417</td>
+<th>C(ind02)[T.** Metals and minerals, except petroleum, merchant wholesalers (*4235)]</th> <td>-1319.4161</td> <td> 4240.693</td> <td>   -0.311</td> <td> 0.756</td> <td>-9631.104</td> <td> 6992.272</td>
 </tr>
 <tr>
-<th>C(ind02)[T.4195.0]</th> <td> 1.076e+04</td> <td> 2213.355</td> <td>    4.860</td> <td> 0.000</td> <td> 6418.786</td> <td> 1.51e+04</td>
+<th>C(ind02)[T.4195.0]</th> <td> 9328.9570</td> <td> 2195.901</td> <td>    4.248</td> <td> 0.000</td> <td> 5025.027</td> <td> 1.36e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.4265.0]</th> <td> 7256.2580</td> <td> 2544.043</td> <td>    2.852</td> <td> 0.004</td> <td> 2269.976</td> <td> 1.22e+04</td>
+<th>C(ind02)[T.4265.0]</th> <td> 6259.2602</td> <td> 2523.811</td> <td>    2.480</td> <td> 0.013</td> <td> 1312.633</td> <td> 1.12e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Machinery, equipment, and supplies, merchant wholesalers (*4238)]</th> <td>  1.16e+04</td> <td> 1831.181</td> <td>    6.333</td> <td> 0.000</td> <td> 8008.173</td> <td> 1.52e+04</td>
+<th>C(ind02)[T.** Machinery, equipment, and supplies, merchant wholesalers (*4238)]</th> <td>  1.07e+04</td> <td> 1816.653</td> <td>    5.889</td> <td> 0.000</td> <td> 7137.959</td> <td> 1.43e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Recyclable material, merchant wholesalers (*42393)]</th> <td>  -40.9854</td> <td> 3166.932</td> <td>   -0.013</td> <td> 0.990</td> <td>-6248.119</td> <td> 6166.148</td>
+<th>C(ind02)[T.** Recyclable material, merchant wholesalers (*42393)]</th> <td>   29.3521</td> <td> 3141.621</td> <td>    0.009</td> <td> 0.993</td> <td>-6128.174</td> <td> 6186.878</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Miscellaneous durable goods, merchant wholesalers (*4239 exc. 42393)]</th> <td> 9834.9299</td> <td> 3813.521</td> <td>    2.579</td> <td> 0.010</td> <td> 2360.492</td> <td> 1.73e+04</td>
+<th>C(ind02)[T.** Miscellaneous durable goods, merchant wholesalers (*4239 exc. 42393)]</th> <td> 8576.4157</td> <td> 3783.151</td> <td>    2.267</td> <td> 0.023</td> <td> 1161.503</td> <td>  1.6e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Paper and paper products, merchant wholesalers (*4241)]</th> <td> 9631.5826</td> <td> 4061.322</td> <td>    2.372</td> <td> 0.018</td> <td> 1671.460</td> <td> 1.76e+04</td>
+<th>C(ind02)[T.** Paper and paper products, merchant wholesalers (*4241)]</th> <td> 8467.2966</td> <td> 4028.918</td> <td>    2.102</td> <td> 0.036</td> <td>  570.684</td> <td> 1.64e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Drugs, sundries, and chemical and allied products, merchant (wholesalerss*4242, 4246)]</th> <td> 1.663e+04</td> <td> 2150.665</td> <td>    7.731</td> <td> 0.000</td> <td> 1.24e+04</td> <td> 2.08e+04</td>
+<th>C(ind02)[T.** Drugs, sundries, and chemical and allied products, merchant (wholesalerss*4242, 4246)]</th> <td> 1.529e+04</td> <td> 2133.686</td> <td>    7.166</td> <td> 0.000</td> <td> 1.11e+04</td> <td> 1.95e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Apparel, fabrics, and notions, merchant wholesalers (*4243)]</th> <td> 8318.9813</td> <td> 3255.709</td> <td>    2.555</td> <td> 0.011</td> <td> 1937.846</td> <td> 1.47e+04</td>
+<th>C(ind02)[T.** Apparel, fabrics, and notions, merchant wholesalers (*4243)]</th> <td> 7437.3810</td> <td> 3229.740</td> <td>    2.303</td> <td> 0.021</td> <td> 1107.143</td> <td> 1.38e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Groceries and related products, merchant wholesalers (*4244)]</th> <td> 5788.8515</td> <td> 1461.738</td> <td>    3.960</td> <td> 0.000</td> <td> 2923.870</td> <td> 8653.833</td>
+<th>C(ind02)[T.** Groceries and related products, merchant wholesalers (*4244)]</th> <td> 4859.0204</td> <td> 1450.207</td> <td>    3.351</td> <td> 0.001</td> <td> 2016.639</td> <td> 7701.401</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Farm product raw materials, merchant wholesalers (*4245)]</th> <td> 2950.5444</td> <td> 3014.181</td> <td>    0.979</td> <td> 0.328</td> <td>-2957.200</td> <td> 8858.289</td>
+<th>C(ind02)[T.** Farm product raw materials, merchant wholesalers (*4245)]</th> <td> 2704.0886</td> <td> 2990.095</td> <td>    0.904</td> <td> 0.366</td> <td>-3156.447</td> <td> 8564.624</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Petroleum and petroleum products, merchant wholesalers (*4247)]</th> <td> 1.555e+04</td> <td> 2434.368</td> <td>    6.387</td> <td> 0.000</td> <td> 1.08e+04</td> <td> 2.03e+04</td>
+<th>C(ind02)[T.** Petroleum and petroleum products, merchant wholesalers (*4247)]</th> <td> 1.482e+04</td> <td> 2414.946</td> <td>    6.139</td> <td> 0.000</td> <td> 1.01e+04</td> <td> 1.96e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Alcoholic beverages, merchant wholesalers (*4248)]</th> <td> 5327.6504</td> <td> 2713.196</td> <td>    1.964</td> <td> 0.050</td> <td>    9.831</td> <td> 1.06e+04</td>
+<th>C(ind02)[T.** Alcoholic beverages, merchant wholesalers (*4248)]</th> <td> 4366.3960</td> <td> 2691.597</td> <td>    1.622</td> <td> 0.105</td> <td> -909.089</td> <td> 9641.881</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Farm supplies, merchant wholesalers (*42491)]</th> <td> 1.083e+04</td> <td> 3637.204</td> <td>    2.978</td> <td> 0.003</td> <td> 3704.526</td> <td>  1.8e+04</td>
+<th>C(ind02)[T.** Farm supplies, merchant wholesalers (*42491)]</th> <td> 1.094e+04</td> <td> 3608.125</td> <td>    3.032</td> <td> 0.002</td> <td> 3866.684</td> <td>  1.8e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Miscellaneous (nondurable goods, merchant wholesalerss*4249 exc. 42491)]</th> <td> 5692.3790</td> <td> 2543.921</td> <td>    2.238</td> <td> 0.025</td> <td>  706.336</td> <td> 1.07e+04</td>
+<th>C(ind02)[T.** Miscellaneous (nondurable goods, merchant wholesalerss*4249 exc. 42491)]</th> <td> 5339.2065</td> <td> 2523.593</td> <td>    2.116</td> <td> 0.034</td> <td>  393.006</td> <td> 1.03e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.*** Wholesale electronic markets, agents and brokers New industry (*4251)]</th> <td> 1193.5585</td> <td> 3485.821</td> <td>    0.342</td> <td> 0.732</td> <td>-5638.593</td> <td> 8025.711</td>
+<th>C(ind02)[T.*** Wholesale electronic markets, agents and brokers New industry (*4251)]</th> <td>  218.6315</td> <td> 3458.032</td> <td>    0.063</td> <td> 0.950</td> <td>-6559.054</td> <td> 6996.317</td>
 </tr>
 <tr>
-<th>C(ind02)[T.**Not specified wholesale trade (Part of 42)]</th> <td>   39.3868</td> <td> 4101.098</td> <td>    0.010</td> <td> 0.992</td> <td>-7998.696</td> <td> 8077.470</td>
+<th>C(ind02)[T.**Not specified wholesale trade (Part of 42)]</th> <td> -491.0110</td> <td> 4068.338</td> <td>   -0.121</td> <td> 0.904</td> <td>-8464.885</td> <td> 7482.863</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Automobile dealers (4411)]</th> <td> 8101.2705</td> <td> 1331.817</td> <td>    6.083</td> <td> 0.000</td> <td> 5490.931</td> <td> 1.07e+04</td>
+<th>C(ind02)[T.Automobile dealers (4411)]</th> <td> 8084.3333</td> <td> 1321.170</td> <td>    6.119</td> <td> 0.000</td> <td> 5494.863</td> <td> 1.07e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other motor vehicle dealers (4412)]</th> <td> 7648.0634</td> <td> 2446.850</td> <td>    3.126</td> <td> 0.002</td> <td> 2852.279</td> <td> 1.24e+04</td>
+<th>C(ind02)[T.Other motor vehicle dealers (4412)]</th> <td> 6663.2288</td> <td> 2427.382</td> <td>    2.745</td> <td> 0.006</td> <td> 1905.600</td> <td> 1.14e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Auto parts, accessories, and tire stores (4413)]</th> <td> -292.2963</td> <td> 1683.660</td> <td>   -0.174</td> <td> 0.862</td> <td>-3592.242</td> <td> 3007.649</td>
+<th>C(ind02)[T.Auto parts, accessories, and tire stores (4413)]</th> <td> -415.2256</td> <td> 1670.206</td> <td>   -0.249</td> <td> 0.804</td> <td>-3688.801</td> <td> 2858.350</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Furniture and home furnishings stores (442)]</th> <td> 1227.7563</td> <td> 1726.498</td> <td>    0.711</td> <td> 0.477</td> <td>-2156.151</td> <td> 4611.663</td>
+<th>C(ind02)[T.Furniture and home furnishings stores (442)]</th> <td>  963.1961</td> <td> 1712.688</td> <td>    0.562</td> <td> 0.574</td> <td>-2393.644</td> <td> 4320.036</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Household appliance stores (443111)]</th> <td> -414.5737</td> <td> 3721.462</td> <td>   -0.111</td> <td> 0.911</td> <td>-7708.578</td> <td> 6879.431</td>
+<th>C(ind02)[T.Household appliance stores (443111)]</th> <td> -322.2550</td> <td> 3691.688</td> <td>   -0.087</td> <td> 0.930</td> <td>-7557.902</td> <td> 6913.392</td>
 </tr>
 <tr>
-<th>C(ind02)[T.4795.0]</th> <td> 7784.0374</td> <td> 1730.306</td> <td>    4.499</td> <td> 0.000</td> <td> 4392.667</td> <td> 1.12e+04</td>
+<th>C(ind02)[T.4795.0]</th> <td> 7757.8429</td> <td> 1716.472</td> <td>    4.520</td> <td> 0.000</td> <td> 4393.585</td> <td> 1.11e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Building material and supplies dealers (4441 exc. 44413)]</th> <td> 1277.4693</td> <td> 1425.842</td> <td>    0.896</td> <td> 0.370</td> <td>-1517.157</td> <td> 4072.095</td>
+<th>C(ind02)[T.Building material and supplies dealers (4441 exc. 44413)]</th> <td>  979.5982</td> <td> 1414.462</td> <td>    0.693</td> <td> 0.489</td> <td>-1792.725</td> <td> 3751.921</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Hardware stores (44413)]</th> <td> -780.1004</td> <td> 2386.154</td> <td>   -0.327</td> <td> 0.744</td> <td>-5456.922</td> <td> 3896.721</td>
+<th>C(ind02)[T.Hardware stores (44413)]</th> <td>-1055.9630</td> <td> 2367.090</td> <td>   -0.446</td> <td> 0.656</td> <td>-5695.419</td> <td> 3583.493</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Lawn and garden equipment and supplies stores (4442)]</th> <td> 2166.6162</td> <td> 2082.601</td> <td>    1.040</td> <td> 0.298</td> <td>-1915.247</td> <td> 6248.479</td>
+<th>C(ind02)[T.Lawn and garden equipment and supplies stores (4442)]</th> <td> 1815.5861</td> <td> 2065.972</td> <td>    0.879</td> <td> 0.380</td> <td>-2233.684</td> <td> 5864.856</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Grocery stores (4451)]</th> <td> -861.2386</td> <td> 1264.282</td> <td>   -0.681</td> <td> 0.496</td> <td>-3339.210</td> <td> 1616.732</td>
+<th>C(ind02)[T.Grocery stores (4451)]</th> <td> -940.4720</td> <td> 1254.176</td> <td>   -0.750</td> <td> 0.453</td> <td>-3398.636</td> <td> 1517.692</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Specialty food stores (4452)]</th> <td> 2629.8689</td> <td> 2684.313</td> <td>    0.980</td> <td> 0.327</td> <td>-2631.339</td> <td> 7891.077</td>
+<th>C(ind02)[T.Specialty food stores (4452)]</th> <td> 2784.3464</td> <td> 2662.863</td> <td>    1.046</td> <td> 0.296</td> <td>-2434.821</td> <td> 8003.513</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Beer, wine, and liquor stores (4453)]</th> <td> 1459.5086</td> <td> 3256.242</td> <td>    0.448</td> <td> 0.654</td> <td>-4922.672</td> <td> 7841.689</td>
+<th>C(ind02)[T.Beer, wine, and liquor stores (4453)]</th> <td>  372.9685</td> <td> 3230.287</td> <td>    0.115</td> <td> 0.908</td> <td>-5958.340</td> <td> 6704.277</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Pharmacies and drug stores (44611)]</th> <td> 8999.4348</td> <td> 1489.512</td> <td>    6.042</td> <td> 0.000</td> <td> 6080.016</td> <td> 1.19e+04</td>
+<th>C(ind02)[T.Pharmacies and drug stores (44611)]</th> <td> 8652.8248</td> <td> 1477.628</td> <td>    5.856</td> <td> 0.000</td> <td> 5756.699</td> <td> 1.15e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Health and personal care, except drug, stores (446 exc. 44611)]</th> <td> 8283.4951</td> <td> 1951.196</td> <td>    4.245</td> <td> 0.000</td> <td> 4459.183</td> <td> 1.21e+04</td>
+<th>C(ind02)[T.Health and personal care, except drug, stores (446 exc. 44611)]</th> <td> 7768.4151</td> <td> 1935.611</td> <td>    4.013</td> <td> 0.000</td> <td> 3974.650</td> <td> 1.16e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Gasoline stations (447)]</th> <td>-1103.5162</td> <td> 1800.890</td> <td>   -0.613</td> <td> 0.540</td> <td>-4633.231</td> <td> 2426.199</td>
+<th>C(ind02)[T.Gasoline stations (447)]</th> <td>-1250.9161</td> <td> 1786.491</td> <td>   -0.700</td> <td> 0.484</td> <td>-4752.409</td> <td> 2250.577</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Clothing and accessories, except shoe, stores (448 exc. 44821, 4483)]</th> <td> 2557.3712</td> <td> 1658.422</td> <td>    1.542</td> <td> 0.123</td> <td> -693.108</td> <td> 5807.850</td>
+<th>C(ind02)[T.Clothing and accessories, except shoe, stores (448 exc. 44821, 4483)]</th> <td> 2831.7879</td> <td> 1645.173</td> <td>    1.721</td> <td> 0.085</td> <td> -392.724</td> <td> 6056.300</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Shoe stores (44821)]</th> <td> 1941.5779</td> <td> 3418.599</td> <td>    0.568</td> <td> 0.570</td> <td>-4758.820</td> <td> 8641.976</td>
+<th>C(ind02)[T.Shoe stores (44821)]</th> <td> 2668.7606</td> <td> 3391.296</td> <td>    0.787</td> <td> 0.431</td> <td>-3978.123</td> <td> 9315.645</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Jewelry, luggage, and leather goods stores (4483)]</th> <td> -655.2215</td> <td> 2885.203</td> <td>   -0.227</td> <td> 0.820</td> <td>-6310.171</td> <td> 4999.728</td>
+<th>C(ind02)[T.Jewelry, luggage, and leather goods stores (4483)]</th> <td>  -21.8630</td> <td> 2862.117</td> <td>   -0.008</td> <td> 0.994</td> <td>-5631.564</td> <td> 5587.838</td>
 </tr>
 <tr>
-<th>C(ind02)[T.5275.0]</th> <td> 2639.7650</td> <td> 1915.359</td> <td>    1.378</td> <td> 0.168</td> <td>-1114.307</td> <td> 6393.836</td>
+<th>C(ind02)[T.5275.0]</th> <td> 2519.3878</td> <td> 1900.054</td> <td>    1.326</td> <td> 0.185</td> <td>-1204.686</td> <td> 6243.462</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Sewing, needlework, and piece goods stores (45113)]</th> <td>-1.668e+04</td> <td> 7083.373</td> <td>   -2.355</td> <td> 0.019</td> <td>-3.06e+04</td> <td>-2800.126</td>
+<th>C(ind02)[T.Sewing, needlework, and piece goods stores (45113)]</th> <td>-1.516e+04</td> <td> 7026.841</td> <td>   -2.158</td> <td> 0.031</td> <td>-2.89e+04</td> <td>-1388.579</td>
 </tr>
 <tr>
-<th>C(ind02)[T.5295.0]</th> <td>-3178.1476</td> <td> 5755.846</td> <td>   -0.552</td> <td> 0.581</td> <td>-1.45e+04</td> <td> 8103.215</td>
+<th>C(ind02)[T.5295.0]</th> <td>-3304.4422</td> <td> 5709.839</td> <td>   -0.579</td> <td> 0.563</td> <td>-1.45e+04</td> <td> 7886.747</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Book stores and news dealers (45121)]</th> <td>-2523.8203</td> <td> 3879.450</td> <td>   -0.651</td> <td> 0.515</td> <td>-1.01e+04</td> <td> 5079.836</td>
+<th>C(ind02)[T.Book stores and news dealers (45121)]</th> <td>-2580.1243</td> <td> 3848.446</td> <td>   -0.670</td> <td> 0.503</td> <td>-1.01e+04</td> <td> 4962.766</td>
 </tr>
 <tr>
-<th>C(ind02)[T.****Department stores and discount stores (s45211)]</th> <td>-2063.7215</td> <td> 1315.181</td> <td>   -1.569</td> <td> 0.117</td> <td>-4641.454</td> <td>  514.011</td>
+<th>C(ind02)[T.****Department stores and discount stores (s45211)]</th> <td>-1853.1871</td> <td> 1304.677</td> <td>   -1.420</td> <td> 0.155</td> <td>-4410.333</td> <td>  703.958</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous general merchandise stores (4529)]</th> <td> 1100.8602</td> <td> 1773.677</td> <td>    0.621</td> <td> 0.535</td> <td>-2375.518</td> <td> 4577.238</td>
+<th>C(ind02)[T.Miscellaneous general merchandise stores (4529)]</th> <td>  912.3465</td> <td> 1759.502</td> <td>    0.519</td> <td> 0.604</td> <td>-2536.247</td> <td> 4360.940</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Retail florists (4531)]</th> <td>-3223.3240</td> <td> 4774.794</td> <td>   -0.675</td> <td> 0.500</td> <td>-1.26e+04</td> <td> 6135.194</td>
+<th>C(ind02)[T.Retail florists (4531)]</th> <td>-2962.5157</td> <td> 4736.612</td> <td>   -0.625</td> <td> 0.532</td> <td>-1.22e+04</td> <td> 6321.164</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Office supplies and stationery stores (45321)]</th> <td> 5986.0326</td> <td> 2732.642</td> <td>    2.191</td> <td> 0.028</td> <td>  630.101</td> <td> 1.13e+04</td>
+<th>C(ind02)[T.Office supplies and stationery stores (45321)]</th> <td> 5093.4073</td> <td> 2710.877</td> <td>    1.879</td> <td> 0.060</td> <td> -219.866</td> <td> 1.04e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Used merchandise stores (4533)]</th> <td>-8427.7584</td> <td> 2908.306</td> <td>   -2.898</td> <td> 0.004</td> <td>-1.41e+04</td> <td>-2727.527</td>
+<th>C(ind02)[T.Used merchandise stores (4533)]</th> <td>-8628.4302</td> <td> 2885.050</td> <td>   -2.991</td> <td> 0.003</td> <td>-1.43e+04</td> <td>-2973.781</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Gift, novelty, and souvenir shops (45322)]</th> <td>-3744.5060</td> <td> 3463.670</td> <td>   -1.081</td> <td> 0.280</td> <td>-1.05e+04</td> <td> 3044.230</td>
+<th>C(ind02)[T.Gift, novelty, and souvenir shops (45322)]</th> <td>-3287.1292</td> <td> 3436.000</td> <td>   -0.957</td> <td> 0.339</td> <td>   -1e+04</td> <td> 3447.373</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Miscellaneous retail stores (4539)]</th> <td> 4518.5257</td> <td> 1904.652</td> <td>    2.372</td> <td> 0.018</td> <td>  785.439</td> <td> 8251.612</td>
+<th>C(ind02)[T.Miscellaneous retail stores (4539)]</th> <td> 4607.5289</td> <td> 1889.428</td> <td>    2.439</td> <td> 0.015</td> <td>  904.282</td> <td> 8310.776</td>
 </tr>
 <tr>
-<th>C(ind02)[T.*** Electronic shopping (New industry *454111)]</th> <td> 8738.1999</td> <td> 1995.919</td> <td>    4.378</td> <td> 0.000</td> <td> 4826.232</td> <td> 1.27e+04</td>
+<th>C(ind02)[T.*** Electronic shopping (New industry *454111)]</th> <td> 8431.4560</td> <td> 1979.980</td> <td>    4.258</td> <td> 0.000</td> <td> 4550.728</td> <td> 1.23e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.*** Electronic auctions (New industrys*454112)]</th> <td> 1.616e+04</td> <td> 6663.491</td> <td>    2.426</td> <td> 0.015</td> <td> 3104.219</td> <td> 2.92e+04</td>
+<th>C(ind02)[T.*** Electronic auctions (New industrys*454112)]</th> <td> 1.547e+04</td> <td> 6610.252</td> <td>    2.341</td> <td> 0.019</td> <td> 2516.944</td> <td> 2.84e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Mail order houses (*454113)]</th> <td> 4505.5161</td> <td> 3722.454</td> <td>    1.210</td> <td> 0.226</td> <td>-2790.432</td> <td> 1.18e+04</td>
+<th>C(ind02)[T.** Mail order houses (*454113)]</th> <td> 3736.3137</td> <td> 3692.744</td> <td>    1.012</td> <td> 0.312</td> <td>-3501.403</td> <td>  1.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Vending machine operators (4542)]</th> <td> 7982.6144</td> <td> 4587.396</td> <td>    1.740</td> <td> 0.082</td> <td>-1008.606</td> <td>  1.7e+04</td>
+<th>C(ind02)[T.Vending machine operators (4542)]</th> <td> 7945.6601</td> <td> 4550.736</td> <td>    1.746</td> <td> 0.081</td> <td> -973.706</td> <td> 1.69e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Fuel dealers (45431)]</th> <td> 2713.1999</td> <td> 2986.630</td> <td>    0.908</td> <td> 0.364</td> <td>-3140.545</td> <td> 8566.945</td>
+<th>C(ind02)[T.Fuel dealers (45431)]</th> <td> 1788.5179</td> <td> 2962.827</td> <td>    0.604</td> <td> 0.546</td> <td>-4018.573</td> <td> 7595.609</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other direct selling establishments (45439)]</th> <td> 4085.6284</td> <td> 3751.717</td> <td>    1.089</td> <td> 0.276</td> <td>-3267.675</td> <td> 1.14e+04</td>
+<th>C(ind02)[T.Other direct selling establishments (45439)]</th> <td> 3605.4799</td> <td> 3721.733</td> <td>    0.969</td> <td> 0.333</td> <td>-3689.055</td> <td> 1.09e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Not specified retail trade (Part of 44, 45)]</th> <td>  533.4490</td> <td> 2046.459</td> <td>    0.261</td> <td> 0.794</td> <td>-3477.577</td> <td> 4544.475</td>
+<th>C(ind02)[T.Not specified retail trade (Part of 44, 45)]</th> <td>  864.4306</td> <td> 2030.118</td> <td>    0.426</td> <td> 0.670</td> <td>-3114.567</td> <td> 4843.429</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Air transportation (481)]</th> <td> 1.208e+04</td> <td> 1622.733</td> <td>    7.443</td> <td> 0.000</td> <td> 8898.110</td> <td> 1.53e+04</td>
+<th>C(ind02)[T.Air transportation (481)]</th> <td>  1.14e+04</td> <td> 1609.837</td> <td>    7.083</td> <td> 0.000</td> <td> 8247.270</td> <td> 1.46e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Rail transportation (482)]</th> <td> 2.337e+04</td> <td> 1954.555</td> <td>   11.956</td> <td> 0.000</td> <td> 1.95e+04</td> <td> 2.72e+04</td>
+<th>C(ind02)[T.Rail transportation (482)]</th> <td>  2.19e+04</td> <td> 1939.216</td> <td>   11.292</td> <td> 0.000</td> <td> 1.81e+04</td> <td> 2.57e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Water transportation (483)]</th> <td> 1.727e+04</td> <td> 3417.705</td> <td>    5.053</td> <td> 0.000</td> <td> 1.06e+04</td> <td>  2.4e+04</td>
+<th>C(ind02)[T.Water transportation (483)]</th> <td> 1.709e+04</td> <td> 3390.380</td> <td>    5.042</td> <td> 0.000</td> <td> 1.04e+04</td> <td> 2.37e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Truck transportation (484)]</th> <td> 7630.0133</td> <td> 1291.362</td> <td>    5.909</td> <td> 0.000</td> <td> 5098.965</td> <td> 1.02e+04</td>
+<th>C(ind02)[T.Truck transportation (484)]</th> <td> 6641.8604</td> <td> 1281.230</td> <td>    5.184</td> <td> 0.000</td> <td> 4130.672</td> <td> 9153.049</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Bus service and urban transit (4851, 4852, 4854, 4855, 4859)]</th> <td> 2458.9145</td> <td> 1719.937</td> <td>    1.430</td> <td> 0.153</td> <td> -912.134</td> <td> 5829.963</td>
+<th>C(ind02)[T.Bus service and urban transit (4851, 4852, 4854, 4855, 4859)]</th> <td> 2092.5777</td> <td> 1706.199</td> <td>    1.226</td> <td> 0.220</td> <td>-1251.543</td> <td> 5436.699</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Taxi and limousine service (4853)]</th> <td>-8472.8000</td> <td> 2024.389</td> <td>   -4.185</td> <td> 0.000</td> <td>-1.24e+04</td> <td>-4505.031</td>
+<th>C(ind02)[T.Taxi and limousine service (4853)]</th> <td>-8799.9516</td> <td> 2008.224</td> <td>   -4.382</td> <td> 0.000</td> <td>-1.27e+04</td> <td>-4863.866</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Pipeline transportation (486)]</th> <td> 2.673e+04</td> <td> 3151.474</td> <td>    8.480</td> <td> 0.000</td> <td> 2.05e+04</td> <td> 3.29e+04</td>
+<th>C(ind02)[T.Pipeline transportation (486)]</th> <td> 2.572e+04</td> <td> 3126.368</td> <td>    8.228</td> <td> 0.000</td> <td> 1.96e+04</td> <td> 3.19e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Scenic and sightseeing transportation (487)]</th> <td>-1373.2172</td> <td> 4842.934</td> <td>   -0.284</td> <td> 0.777</td> <td>-1.09e+04</td> <td> 8118.854</td>
+<th>C(ind02)[T.Scenic and sightseeing transportation (487)]</th> <td>-1613.2508</td> <td> 4804.213</td> <td>   -0.336</td> <td> 0.737</td> <td> -1.1e+04</td> <td> 7802.927</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Services incidental to transportation (488)]</th> <td> 8203.6852</td> <td> 1501.200</td> <td>    5.465</td> <td> 0.000</td> <td> 5261.359</td> <td> 1.11e+04</td>
+<th>C(ind02)[T.Services incidental to transportation (488)]</th> <td> 7511.1003</td> <td> 1489.283</td> <td>    5.043</td> <td> 0.000</td> <td> 4592.131</td> <td> 1.04e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Postal Service (491)]</th> <td> 6028.1519</td> <td> 1553.017</td> <td>    3.882</td> <td> 0.000</td> <td> 2984.264</td> <td> 9072.040</td>
+<th>C(ind02)[T.Postal Service (491)]</th> <td> 5105.5804</td> <td> 1540.746</td> <td>    3.314</td> <td> 0.001</td> <td> 2085.744</td> <td> 8125.417</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Couriers and messengers (492)]</th> <td> 7625.2671</td> <td> 1573.806</td> <td>    4.845</td> <td> 0.000</td> <td> 4540.634</td> <td> 1.07e+04</td>
+<th>C(ind02)[T.Couriers and messengers (492)]</th> <td> 6832.3205</td> <td> 1561.330</td> <td>    4.376</td> <td> 0.000</td> <td> 3772.140</td> <td> 9892.501</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Warehousing and storage (493)]</th> <td> -953.2103</td> <td> 1611.585</td> <td>   -0.591</td> <td> 0.554</td> <td>-4111.891</td> <td> 2205.470</td>
+<th>C(ind02)[T.Warehousing and storage (493)]</th> <td>-1125.7179</td> <td> 1598.705</td> <td>   -0.704</td> <td> 0.481</td> <td>-4259.153</td> <td> 2007.717</td>
 </tr>
 <tr>
-<th>C(ind02)[T.**Newspaper publishers (51111)]</th> <td> 1191.4348</td> <td> 2376.125</td> <td>    0.501</td> <td> 0.616</td> <td>-3465.730</td> <td> 5848.600</td>
+<th>C(ind02)[T.**Newspaper publishers (51111)]</th> <td>  619.5457</td> <td> 2357.144</td> <td>    0.263</td> <td> 0.793</td> <td>-4000.417</td> <td> 5239.508</td>
 </tr>
 <tr>
-<th>C(ind02)[T.**Publishing, except newspapers and software (5111 exc. 51111)]</th> <td> 1.023e+04</td> <td> 2354.685</td> <td>    4.346</td> <td> 0.000</td> <td> 5617.388</td> <td> 1.48e+04</td>
+<th>C(ind02)[T.**Publishing, except newspapers and software (5111 exc. 51111)]</th> <td> 9674.4886</td> <td> 2335.866</td> <td>    4.142</td> <td> 0.000</td> <td> 5096.230</td> <td> 1.43e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Software publishing (5112)]</th> <td> 4.297e+04</td> <td> 3296.952</td> <td>   13.032</td> <td> 0.000</td> <td> 3.65e+04</td> <td> 4.94e+04</td>
+<th>C(ind02)[T.Software publishing (5112)]</th> <td> 4.184e+04</td> <td> 3270.700</td> <td>   12.792</td> <td> 0.000</td> <td> 3.54e+04</td> <td> 4.82e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Motion pictures and video industries (5121)]</th> <td> 1.588e+04</td> <td> 2032.782</td> <td>    7.811</td> <td> 0.000</td> <td> 1.19e+04</td> <td> 1.99e+04</td>
+<th>C(ind02)[T.Motion pictures and video industries (5121)]</th> <td> 1.522e+04</td> <td> 2016.576</td> <td>    7.549</td> <td> 0.000</td> <td> 1.13e+04</td> <td> 1.92e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Sound recording industries (5122)]</th> <td> 6398.3136</td> <td> 7083.244</td> <td>    0.903</td> <td> 0.366</td> <td>-7484.726</td> <td> 2.03e+04</td>
+<th>C(ind02)[T.Sound recording industries (5122)]</th> <td> 8165.1921</td> <td> 7026.744</td> <td>    1.162</td> <td> 0.245</td> <td>-5607.110</td> <td> 2.19e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Radio and television broadcasting and cable (5151, 5152, 5175)]</th> <td> 1.177e+04</td> <td> 1620.936</td> <td>    7.263</td> <td> 0.000</td> <td> 8595.397</td> <td> 1.49e+04</td>
+<th>C(ind02)[T.Radio and television broadcasting and cable (5151, 5152, 5175)]</th> <td> 1.098e+04</td> <td> 1608.077</td> <td>    6.830</td> <td> 0.000</td> <td> 7832.162</td> <td> 1.41e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Internet publishing and broadcasting and web search portals (51913)]</th> <td> 4.618e+04</td> <td> 2601.515</td> <td>   17.750</td> <td> 0.000</td> <td> 4.11e+04</td> <td> 5.13e+04</td>
+<th>C(ind02)[T.Internet publishing and broadcasting and web search portals (51913)]</th> <td>   4.5e+04</td> <td> 2580.859</td> <td>   17.437</td> <td> 0.000</td> <td> 3.99e+04</td> <td> 5.01e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Wired telecommunications carriers (*5171)]</th> <td> 1.524e+04</td> <td> 1694.045</td> <td>    8.997</td> <td> 0.000</td> <td> 1.19e+04</td> <td> 1.86e+04</td>
+<th>C(ind02)[T.Wired telecommunications carriers (*5171)]</th> <td>  1.39e+04</td> <td> 1680.777</td> <td>    8.270</td> <td> 0.000</td> <td> 1.06e+04</td> <td> 1.72e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other telecommunications services (*517 exc. 5171, 5175)]</th> <td> 1.515e+04</td> <td> 1711.870</td> <td>    8.849</td> <td> 0.000</td> <td> 1.18e+04</td> <td> 1.85e+04</td>
+<th>C(ind02)[T.Other telecommunications services (*517 exc. 5171, 5175)]</th> <td> 1.419e+04</td> <td> 1698.328</td> <td>    8.353</td> <td> 0.000</td> <td> 1.09e+04</td> <td> 1.75e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.**** Data processing, hosting, and related services (*5182)]</th> <td> 1.263e+04</td> <td> 3120.484</td> <td>    4.049</td> <td> 0.000</td> <td> 6518.725</td> <td> 1.88e+04</td>
+<th>C(ind02)[T.**** Data processing, hosting, and related services (*5182)]</th> <td> 1.158e+04</td> <td> 3095.637</td> <td>    3.740</td> <td> 0.000</td> <td> 5508.895</td> <td> 1.76e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Libraries and archives (*51912)]</th> <td>-4295.1435</td> <td> 2627.519</td> <td>   -1.635</td> <td> 0.102</td> <td>-9445.037</td> <td>  854.750</td>
+<th>C(ind02)[T.Libraries and archives (*51912)]</th> <td>-4564.9812</td> <td> 2606.527</td> <td>   -1.751</td> <td> 0.080</td> <td>-9673.731</td> <td>  543.769</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other information services (*5191 exc. 51912)]</th> <td> 1.951e+04</td> <td> 4843.848</td> <td>    4.028</td> <td> 0.000</td> <td>    1e+04</td> <td>  2.9e+04</td>
+<th>C(ind02)[T.Other information services (*5191 exc. 51912)]</th> <td> 1.908e+04</td> <td> 4805.133</td> <td>    3.970</td> <td> 0.000</td> <td> 9660.563</td> <td> 2.85e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Banking and related activities (521, 52211,52219)]</th> <td> 1.436e+04</td> <td> 1242.229</td> <td>   11.561</td> <td> 0.000</td> <td> 1.19e+04</td> <td> 1.68e+04</td>
+<th>C(ind02)[T.Banking and related activities (521, 52211,52219)]</th> <td> 1.373e+04</td> <td> 1232.375</td> <td>   11.139</td> <td> 0.000</td> <td> 1.13e+04</td> <td> 1.61e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Savings institutions, including credit unions (52212, 52213)]</th> <td> 5783.7155</td> <td> 1896.485</td> <td>    3.050</td> <td> 0.002</td> <td> 2066.637</td> <td> 9500.794</td>
+<th>C(ind02)[T.Savings institutions, including credit unions (52212, 52213)]</th> <td> 5310.5335</td> <td> 1881.337</td> <td>    2.823</td> <td> 0.005</td> <td> 1623.144</td> <td> 8997.923</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Non-depository credit and related activities (5222, 5223)]</th> <td> 1.814e+04</td> <td> 1415.703</td> <td>   12.810</td> <td> 0.000</td> <td> 1.54e+04</td> <td> 2.09e+04</td>
+<th>C(ind02)[T.Non-depository credit and related activities (5222, 5223)]</th> <td>  1.75e+04</td> <td> 1404.460</td> <td>   12.463</td> <td> 0.000</td> <td> 1.48e+04</td> <td> 2.03e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Securities, commodities, funds, trusts, and other financial investments (523, 525)]</th> <td> 2.411e+04</td> <td> 1381.214</td> <td>   17.459</td> <td> 0.000</td> <td> 2.14e+04</td> <td> 2.68e+04</td>
+<th>C(ind02)[T.Securities, commodities, funds, trusts, and other financial investments (523, 525)]</th> <td> 2.346e+04</td> <td> 1370.255</td> <td>   17.120</td> <td> 0.000</td> <td> 2.08e+04</td> <td> 2.61e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Insurance carriers and related activities (524)]</th> <td> 1.233e+04</td> <td> 1217.406</td> <td>   10.129</td> <td> 0.000</td> <td> 9944.480</td> <td> 1.47e+04</td>
+<th>C(ind02)[T.Insurance carriers and related activities (524)]</th> <td> 1.152e+04</td> <td> 1207.811</td> <td>    9.537</td> <td> 0.000</td> <td> 9151.357</td> <td> 1.39e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Real estate (531)]</th> <td> 9190.2280</td> <td> 1274.789</td> <td>    7.209</td> <td> 0.000</td> <td> 6691.663</td> <td> 1.17e+04</td>
+<th>C(ind02)[T.Real estate (531)]</th> <td> 8564.8395</td> <td> 1264.674</td> <td>    6.772</td> <td> 0.000</td> <td> 6086.099</td> <td>  1.1e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Automotive equipment rental and leasing (5321)]</th> <td> 2069.0345</td> <td> 2606.882</td> <td>    0.794</td> <td> 0.427</td> <td>-3040.411</td> <td> 7178.480</td>
+<th>C(ind02)[T.Automotive equipment rental and leasing (5321)]</th> <td> 2009.0974</td> <td> 2586.042</td> <td>    0.777</td> <td> 0.437</td> <td>-3059.503</td> <td> 7077.698</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Video tape and disk rental (53223)]</th> <td>-3044.6701</td> <td> 1.11e+04</td> <td>   -0.274</td> <td> 0.784</td> <td>-2.48e+04</td> <td> 1.87e+04</td>
+<th>C(ind02)[T.Video tape and disk rental (53223)]</th> <td>-3759.6987</td> <td>  1.1e+04</td> <td>   -0.341</td> <td> 0.733</td> <td>-2.54e+04</td> <td> 1.79e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other consumer goods rental (53221, 53222, 53229, 5323)]</th> <td> 1012.0036</td> <td> 3219.676</td> <td>    0.314</td> <td> 0.753</td> <td>-5298.507</td> <td> 7322.514</td>
+<th>C(ind02)[T.Other consumer goods rental (53221, 53222, 53229, 5323)]</th> <td>  464.4952</td> <td> 3193.962</td> <td>    0.145</td> <td> 0.884</td> <td>-5795.618</td> <td> 6724.609</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Commercial, industrial, and other intangible assets rental and leasing (5324, 533)]</th> <td> 1.446e+04</td> <td> 2815.344</td> <td>    5.136</td> <td> 0.000</td> <td> 8942.607</td> <td>    2e+04</td>
+<th>C(ind02)[T.Commercial, industrial, and other intangible assets rental and leasing (5324, 533)]</th> <td> 1.371e+04</td> <td> 2792.879</td> <td>    4.907</td> <td> 0.000</td> <td> 8231.456</td> <td> 1.92e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Legal services (5411)]</th> <td> 2.004e+04</td> <td> 1333.231</td> <td>   15.029</td> <td> 0.000</td> <td> 1.74e+04</td> <td> 2.27e+04</td>
+<th>C(ind02)[T.Legal services (5411)]</th> <td> 1.968e+04</td> <td> 1322.597</td> <td>   14.878</td> <td> 0.000</td> <td> 1.71e+04</td> <td> 2.23e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Accounting, tax preparation, bookkeeping, and payroll services (5412)]</th> <td> 1.386e+04</td> <td> 1453.580</td> <td>    9.533</td> <td> 0.000</td> <td>  1.1e+04</td> <td> 1.67e+04</td>
+<th>C(ind02)[T.Accounting, tax preparation, bookkeeping, and payroll services (5412)]</th> <td> 1.367e+04</td> <td> 1441.965</td> <td>    9.478</td> <td> 0.000</td> <td> 1.08e+04</td> <td> 1.65e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Architectural, engineering, and related services (5413)]</th> <td> 1.585e+04</td> <td> 1291.229</td> <td>   12.275</td> <td> 0.000</td> <td> 1.33e+04</td> <td> 1.84e+04</td>
+<th>C(ind02)[T.Architectural, engineering, and related services (5413)]</th> <td>  1.55e+04</td> <td> 1280.922</td> <td>   12.099</td> <td> 0.000</td> <td>  1.3e+04</td> <td>  1.8e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Specialized design services (5414)]</th> <td> 6793.0642</td> <td> 2382.495</td> <td>    2.851</td> <td> 0.004</td> <td> 2123.414</td> <td> 1.15e+04</td>
+<th>C(ind02)[T.Specialized design services (5414)]</th> <td> 6567.6883</td> <td> 2363.434</td> <td>    2.779</td> <td> 0.005</td> <td> 1935.396</td> <td> 1.12e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Computer systems design and related services (5415)]</th> <td> 2.509e+04</td> <td> 1205.044</td> <td>   20.819</td> <td> 0.000</td> <td> 2.27e+04</td> <td> 2.74e+04</td>
+<th>C(ind02)[T.Computer systems design and related services (5415)]</th> <td> 2.412e+04</td> <td> 1195.609</td> <td>   20.172</td> <td> 0.000</td> <td> 2.18e+04</td> <td> 2.65e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Management, scientific, and technical consulting services (5416)]</th> <td> 2.045e+04</td> <td> 1371.447</td> <td>   14.910</td> <td> 0.000</td> <td> 1.78e+04</td> <td> 2.31e+04</td>
+<th>C(ind02)[T.Management, scientific, and technical consulting services (5416)]</th> <td> 1.994e+04</td> <td> 1360.535</td> <td>   14.653</td> <td> 0.000</td> <td> 1.73e+04</td> <td> 2.26e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Scientific research and development services (5417)]</th> <td> 1.997e+04</td> <td> 1515.312</td> <td>   13.178</td> <td> 0.000</td> <td>  1.7e+04</td> <td> 2.29e+04</td>
+<th>C(ind02)[T.Scientific research and development services (5417)]</th> <td> 1.943e+04</td> <td> 1503.241</td> <td>   12.928</td> <td> 0.000</td> <td> 1.65e+04</td> <td> 2.24e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Advertising and related services (5418)]</th> <td> 1.627e+04</td> <td> 1681.638</td> <td>    9.674</td> <td> 0.000</td> <td>  1.3e+04</td> <td> 1.96e+04</td>
+<th>C(ind02)[T.Advertising and related services (5418)]</th> <td> 1.572e+04</td> <td> 1668.232</td> <td>    9.421</td> <td> 0.000</td> <td> 1.24e+04</td> <td>  1.9e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Veterinary services (54194)]</th> <td> 5952.7522</td> <td> 1921.416</td> <td>    3.098</td> <td> 0.002</td> <td> 2186.809</td> <td> 9718.695</td>
+<th>C(ind02)[T.Veterinary services (54194)]</th> <td> 6221.7889</td> <td> 1906.063</td> <td>    3.264</td> <td> 0.001</td> <td> 2485.937</td> <td> 9957.641</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other professional, scientific, and technical services (5419 exc. 54194)]</th> <td> 1.226e+04</td> <td> 2072.437</td> <td>    5.916</td> <td> 0.000</td> <td> 8199.448</td> <td> 1.63e+04</td>
+<th>C(ind02)[T.Other professional, scientific, and technical services (5419 exc. 54194)]</th> <td> 1.201e+04</td> <td> 2055.881</td> <td>    5.843</td> <td> 0.000</td> <td> 7984.003</td> <td>  1.6e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Management of companies and enterprises (551)]</th> <td> 7092.9170</td> <td> 2364.295</td> <td>    3.000</td> <td> 0.003</td> <td> 2458.937</td> <td> 1.17e+04</td>
+<th>C(ind02)[T.Management of companies and enterprises (551)]</th> <td> 6591.1401</td> <td> 2345.404</td> <td>    2.810</td> <td> 0.005</td> <td> 1994.187</td> <td> 1.12e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Employment services (5613)]</th> <td> 5211.0769</td> <td> 1475.563</td> <td>    3.532</td> <td> 0.000</td> <td> 2318.998</td> <td> 8103.156</td>
+<th>C(ind02)[T.Employment services (5613)]</th> <td> 4965.6131</td> <td> 1463.770</td> <td>    3.392</td> <td> 0.001</td> <td> 2096.649</td> <td> 7834.577</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Business support services (5614)]</th> <td> 2759.4388</td> <td> 1603.633</td> <td>    1.721</td> <td> 0.085</td> <td> -383.656</td> <td> 5902.533</td>
+<th>C(ind02)[T.Business support services (5614)]</th> <td> 3031.6183</td> <td> 1590.822</td> <td>    1.906</td> <td> 0.057</td> <td>  -86.367</td> <td> 6149.604</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Travel arrangements and reservation services (5615)]</th> <td> 8363.5104</td> <td> 2115.255</td> <td>    3.954</td> <td> 0.000</td> <td> 4217.646</td> <td> 1.25e+04</td>
+<th>C(ind02)[T.Travel arrangements and reservation services (5615)]</th> <td> 8051.0310</td> <td> 2098.358</td> <td>    3.837</td> <td> 0.000</td> <td> 3938.284</td> <td> 1.22e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Investigation and security services (5616)]</th> <td>  124.6381</td> <td> 1510.520</td> <td>    0.083</td> <td> 0.934</td> <td>-2835.956</td> <td> 3085.233</td>
+<th>C(ind02)[T.Investigation and security services (5616)]</th> <td>  253.2937</td> <td> 1498.450</td> <td>    0.169</td> <td> 0.866</td> <td>-2683.644</td> <td> 3190.231</td>
 </tr>
 <tr>
-<th>C(ind02)[T.** Services to buildings and dwellings (5617 exc. 56173)]</th> <td>-2131.7452</td> <td> 1447.511</td> <td>   -1.473</td> <td> 0.141</td> <td>-4968.843</td> <td>  705.353</td>
+<th>C(ind02)[T.** Services to buildings and dwellings (5617 exc. 56173)]</th> <td>-2671.0005</td> <td> 1435.986</td> <td>   -1.860</td> <td> 0.063</td> <td>-5485.510</td> <td>  143.508</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Landscaping services (56173)]</th> <td>-2910.8531</td> <td> 1473.807</td> <td>   -1.975</td> <td> 0.048</td> <td>-5799.490</td> <td>  -22.216</td>
+<th>C(ind02)[T.Landscaping services (56173)]</th> <td>-3358.4707</td> <td> 1462.063</td> <td>   -2.297</td> <td> 0.022</td> <td>-6224.090</td> <td> -492.851</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other administrative and other support services (5611, 5612, 5619)]</th> <td> 3873.4186</td> <td> 1982.628</td> <td>    1.954</td> <td> 0.051</td> <td>  -12.500</td> <td> 7759.337</td>
+<th>C(ind02)[T.Other administrative and other support services (5611, 5612, 5619)]</th> <td> 3725.8454</td> <td> 1966.786</td> <td>    1.894</td> <td> 0.058</td> <td> -129.022</td> <td> 7580.712</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Waste management and remediation services (562)]</th> <td> 6367.7567</td> <td> 1659.724</td> <td>    3.837</td> <td> 0.000</td> <td> 3114.725</td> <td> 9620.788</td>
+<th>C(ind02)[T.Waste management and remediation services (562)]</th> <td> 5355.7644</td> <td> 1646.617</td> <td>    3.253</td> <td> 0.001</td> <td> 2128.422</td> <td> 8583.106</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Elementary and secondary schools (6111)]</th> <td>  675.0227</td> <td> 1138.612</td> <td>    0.593</td> <td> 0.553</td> <td>-1556.638</td> <td> 2906.683</td>
+<th>C(ind02)[T.Elementary and secondary schools (6111)]</th> <td> -210.2206</td> <td> 1129.684</td> <td>   -0.186</td> <td> 0.852</td> <td>-2424.383</td> <td> 2003.942</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Colleges and universities, including junior colleges (6112, 6113)]</th> <td> 7708.6187</td> <td> 1199.615</td> <td>    6.426</td> <td> 0.000</td> <td> 5357.393</td> <td> 1.01e+04</td>
+<th>C(ind02)[T.Colleges and universities, including junior colleges (6112, 6113)]</th> <td> 7216.1335</td> <td> 1190.067</td> <td>    6.064</td> <td> 0.000</td> <td> 4883.621</td> <td> 9548.646</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Business, technical, and trade schools and training (6114, 6115)]</th> <td> 8042.8479</td> <td> 3463.709</td> <td>    2.322</td> <td> 0.020</td> <td> 1254.035</td> <td> 1.48e+04</td>
+<th>C(ind02)[T.Business, technical, and trade schools and training (6114, 6115)]</th> <td> 7517.8662</td> <td> 3436.028</td> <td>    2.188</td> <td> 0.029</td> <td>  783.309</td> <td> 1.43e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other schools, instruction, and educational services (6116, 6117)]</th> <td> 7034.8796</td> <td> 1821.264</td> <td>    3.863</td> <td> 0.000</td> <td> 3465.232</td> <td> 1.06e+04</td>
+<th>C(ind02)[T.Other schools, instruction, and educational services (6116, 6117)]</th> <td> 7141.0892</td> <td> 1806.705</td> <td>    3.953</td> <td> 0.000</td> <td> 3599.978</td> <td> 1.07e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Offices of physicians (6211)]</th> <td> 1.086e+04</td> <td> 1328.796</td> <td>    8.171</td> <td> 0.000</td> <td> 8253.101</td> <td> 1.35e+04</td>
+<th>C(ind02)[T.Offices of physicians (6211)]</th> <td>  1.01e+04</td> <td> 1318.285</td> <td>    7.664</td> <td> 0.000</td> <td> 7519.072</td> <td> 1.27e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Offices of dentists (6212)]</th> <td> 7495.9965</td> <td> 1595.142</td> <td>    4.699</td> <td> 0.000</td> <td> 4369.545</td> <td> 1.06e+04</td>
+<th>C(ind02)[T.Offices of dentists (6212)]</th> <td> 6813.6503</td> <td> 1582.467</td> <td>    4.306</td> <td> 0.000</td> <td> 3712.042</td> <td> 9915.259</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Offices of chiropractors (62131)]</th> <td> 2199.3757</td> <td> 3638.997</td> <td>    0.604</td> <td> 0.546</td> <td>-4932.997</td> <td> 9331.748</td>
+<th>C(ind02)[T.Offices of chiropractors (62131)]</th> <td> 2577.9669</td> <td> 3609.918</td> <td>    0.714</td> <td> 0.475</td> <td>-4497.413</td> <td> 9653.347</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Offices of optometrists (62132)]</th> <td> 3748.7228</td> <td> 2592.982</td> <td>    1.446</td> <td> 0.148</td> <td>-1333.480</td> <td> 8830.925</td>
+<th>C(ind02)[T.Offices of optometrists (62132)]</th> <td> 3308.1682</td> <td> 2572.262</td> <td>    1.286</td> <td> 0.198</td> <td>-1733.423</td> <td> 8349.759</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Offices of other health practitioners (6213 exc. 62131, 62132)]</th> <td> 4644.4511</td> <td> 2678.775</td> <td>    1.734</td> <td> 0.083</td> <td> -605.903</td> <td> 9894.805</td>
+<th>C(ind02)[T.Offices of other health practitioners (6213 exc. 62131, 62132)]</th> <td> 4207.0965</td> <td> 2657.379</td> <td>    1.583</td> <td> 0.113</td> <td>-1001.323</td> <td> 9415.516</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Outpatient care centers (6214)]</th> <td> 6209.2211</td> <td> 1278.677</td> <td>    4.856</td> <td> 0.000</td> <td> 3703.036</td> <td> 8715.406</td>
+<th>C(ind02)[T.Outpatient care centers (6214)]</th> <td> 5588.1488</td> <td> 1268.523</td> <td>    4.405</td> <td> 0.000</td> <td> 3101.864</td> <td> 8074.434</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Home health care services (6216)]</th> <td> 1292.3263</td> <td> 1418.334</td> <td>    0.911</td> <td> 0.362</td> <td>-1487.585</td> <td> 4072.237</td>
+<th>C(ind02)[T.Home health care services (6216)]</th> <td>  939.3388</td> <td> 1407.019</td> <td>    0.668</td> <td> 0.504</td> <td>-1818.396</td> <td> 3697.073</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other health care services (6215, 6219)]</th> <td> 9278.7353</td> <td> 1326.740</td> <td>    6.994</td> <td> 0.000</td> <td> 6678.347</td> <td> 1.19e+04</td>
+<th>C(ind02)[T.Other health care services (6215, 6219)]</th> <td> 8712.2355</td> <td> 1316.187</td> <td>    6.619</td> <td> 0.000</td> <td> 6132.531</td> <td> 1.13e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Hospitals (622)]</th> <td>  1.12e+04</td> <td> 1143.974</td> <td>    9.789</td> <td> 0.000</td> <td> 8956.347</td> <td> 1.34e+04</td>
+<th>C(ind02)[T.Hospitals (622)]</th> <td>  1.06e+04</td> <td> 1134.900</td> <td>    9.337</td> <td> 0.000</td> <td> 8372.224</td> <td> 1.28e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Nursing care facilities (6231)]</th> <td> 1585.6208</td> <td> 1312.698</td> <td>    1.208</td> <td> 0.227</td> <td> -987.246</td> <td> 4158.488</td>
+<th>C(ind02)[T.Nursing care facilities (6231)]</th> <td> 1036.2326</td> <td> 1302.249</td> <td>    0.796</td> <td> 0.426</td> <td>-1516.154</td> <td> 3588.619</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Residential care facilities, without nursing (6232, 6233, 6239)]</th> <td>  107.0647</td> <td> 1470.620</td> <td>    0.073</td> <td> 0.942</td> <td>-2775.327</td> <td> 2989.456</td>
+<th>C(ind02)[T.Residential care facilities, without nursing (6232, 6233, 6239)]</th> <td> -233.3907</td> <td> 1458.887</td> <td>   -0.160</td> <td> 0.873</td> <td>-3092.785</td> <td> 2626.004</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Individual and family services (6241)]</th> <td>-1112.7260</td> <td> 1334.598</td> <td>   -0.834</td> <td> 0.404</td> <td>-3728.517</td> <td> 1503.065</td>
+<th>C(ind02)[T.Individual and family services (6241)]</th> <td>-1634.6294</td> <td> 1323.976</td> <td>   -1.235</td> <td> 0.217</td> <td>-4229.600</td> <td>  960.341</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Community food and housing, and emergency services (6242)]</th> <td> 3755.9218</td> <td> 2794.994</td> <td>    1.344</td> <td> 0.179</td> <td>-1722.221</td> <td> 9234.064</td>
+<th>C(ind02)[T.Community food and housing, and emergency services (6242)]</th> <td> 3247.7903</td> <td> 2772.680</td> <td>    1.171</td> <td> 0.241</td> <td>-2186.617</td> <td> 8682.197</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Vocational rehabilitation services (6243)]</th> <td>-7802.1419</td> <td> 3375.716</td> <td>   -2.311</td> <td> 0.021</td> <td>-1.44e+04</td> <td>-1185.794</td>
+<th>C(ind02)[T.Vocational rehabilitation services (6243)]</th> <td>-8985.5856</td> <td> 3348.747</td> <td>   -2.683</td> <td> 0.007</td> <td>-1.55e+04</td> <td>-2422.097</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Child day care services (6244)]</th> <td>-3177.7836</td> <td> 1434.597</td> <td>   -2.215</td> <td> 0.027</td> <td>-5989.569</td> <td> -365.998</td>
+<th>C(ind02)[T.Child day care services (6244)]</th> <td>-3274.1870</td> <td> 1423.133</td> <td>   -2.301</td> <td> 0.021</td> <td>-6063.503</td> <td> -484.871</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Independent artists, performing arts, spectator sports, and related industries (711)]</th> <td> 5905.7767</td> <td> 1907.550</td> <td>    3.096</td> <td> 0.002</td> <td> 2167.011</td> <td> 9644.542</td>
+<th>C(ind02)[T.Independent artists, performing arts, spectator sports, and related industries (711)]</th> <td> 5893.1872</td> <td> 1892.299</td> <td>    3.114</td> <td> 0.002</td> <td> 2184.312</td> <td> 9602.062</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Museums, art galleries, historical sites, and similar institutions (712)]</th> <td> -275.4334</td> <td> 1951.106</td> <td>   -0.141</td> <td> 0.888</td> <td>-4099.570</td> <td> 3548.703</td>
+<th>C(ind02)[T.Museums, art galleries, historical sites, and similar institutions (712)]</th> <td> -564.7850</td> <td> 1935.515</td> <td>   -0.292</td> <td> 0.770</td> <td>-4358.362</td> <td> 3228.792</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Bowling centers (71395)]</th> <td>-8548.7123</td> <td> 5529.259</td> <td>   -1.546</td> <td> 0.122</td> <td>-1.94e+04</td> <td> 2288.543</td>
+<th>C(ind02)[T.Bowling centers (71395)]</th> <td>-9251.7862</td> <td> 5485.047</td> <td>   -1.687</td> <td> 0.092</td> <td>   -2e+04</td> <td> 1498.815</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other amusement, gambling, and recreation industries (713 exc. 71395)]</th> <td>-1693.8607</td> <td> 1324.162</td> <td>   -1.279</td> <td> 0.201</td> <td>-4289.195</td> <td>  901.474</td>
+<th>C(ind02)[T.Other amusement, gambling, and recreation industries (713 exc. 71395)]</th> <td>-1662.9138</td> <td> 1313.579</td> <td>   -1.266</td> <td> 0.206</td> <td>-4237.506</td> <td>  911.678</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Traveler accommodation (7211)]</th> <td> -181.2165</td> <td> 1338.645</td> <td>   -0.135</td> <td> 0.892</td> <td>-2804.939</td> <td> 2442.506</td>
+<th>C(ind02)[T.Traveler accommodation (7211)]</th> <td> -503.2767</td> <td> 1327.967</td> <td>   -0.379</td> <td> 0.705</td> <td>-3106.070</td> <td> 2099.516</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Recreational vehicle parks and camps, and rooming and boarding houses (7212, 7213)]</th> <td>-6767.1990</td> <td> 3417.336</td> <td>   -1.980</td> <td> 0.048</td> <td>-1.35e+04</td> <td>  -69.278</td>
+<th>C(ind02)[T.Recreational vehicle parks and camps, and rooming and boarding houses (7212, 7213)]</th> <td>-4585.9791</td> <td> 3390.379</td> <td>   -1.353</td> <td> 0.176</td> <td>-1.12e+04</td> <td> 2059.108</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Restaurants and other food services (722 exc. 7224)]</th> <td> -889.3845</td> <td> 1156.998</td> <td>   -0.769</td> <td> 0.442</td> <td>-3157.081</td> <td> 1378.312</td>
+<th>C(ind02)[T.Restaurants and other food services (722 exc. 7224)]</th> <td> -428.4812</td> <td> 1147.796</td> <td>   -0.373</td> <td> 0.709</td> <td>-2678.142</td> <td> 1821.180</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Drinking places, alcoholic beverages (7224)]</th> <td>-6277.0522</td> <td> 2704.037</td> <td>   -2.321</td> <td> 0.020</td> <td>-1.16e+04</td> <td> -977.184</td>
+<th>C(ind02)[T.Drinking places, alcoholic beverages (7224)]</th> <td>-6454.3321</td> <td> 2682.426</td> <td>   -2.406</td> <td> 0.016</td> <td>-1.17e+04</td> <td>-1196.821</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Automotive repair and maintenance (8111 exc. 811192)]</th> <td> 4106.0577</td> <td> 1389.213</td> <td>    2.956</td> <td> 0.003</td> <td> 1383.223</td> <td> 6828.892</td>
+<th>C(ind02)[T.Automotive repair and maintenance (8111 exc. 811192)]</th> <td> 3374.6340</td> <td> 1378.207</td> <td>    2.449</td> <td> 0.014</td> <td>  673.372</td> <td> 6075.896</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Car washes (811192)]</th> <td>-3871.3298</td> <td> 2919.834</td> <td>   -1.326</td> <td> 0.185</td> <td>-9594.157</td> <td> 1851.497</td>
+<th>C(ind02)[T.Car washes (811192)]</th> <td>-3316.7787</td> <td> 2896.517</td> <td>   -1.145</td> <td> 0.252</td> <td>-8993.904</td> <td> 2360.347</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Electronic and precision equipment repair and maintenance (8112)]</th> <td> 2980.8832</td> <td> 3202.816</td> <td>    0.931</td> <td> 0.352</td> <td>-3296.583</td> <td> 9258.350</td>
+<th>C(ind02)[T.Electronic and precision equipment repair and maintenance (8112)]</th> <td> 2459.4280</td> <td> 3177.236</td> <td>    0.774</td> <td> 0.439</td> <td>-3767.902</td> <td> 8686.758</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Commercial and industrial machinery and equipment repair and maintenance (8113)]</th> <td> 8898.5347</td> <td> 2072.477</td> <td>    4.294</td> <td> 0.000</td> <td> 4836.514</td> <td>  1.3e+04</td>
+<th>C(ind02)[T.Commercial and industrial machinery and equipment repair and maintenance (8113)]</th> <td> 8307.4220</td> <td> 2055.957</td> <td>    4.041</td> <td> 0.000</td> <td> 4277.780</td> <td> 1.23e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Personal and household goods repair and maintenance (8114 exc. 81143)]</th> <td> 4203.0746</td> <td> 3150.862</td> <td>    1.334</td> <td> 0.182</td> <td>-1972.562</td> <td> 1.04e+04</td>
+<th>C(ind02)[T.Personal and household goods repair and maintenance (8114 exc. 81143)]</th> <td> 3852.7006</td> <td> 3125.689</td> <td>    1.233</td> <td> 0.218</td> <td>-2273.598</td> <td> 9979.000</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Barber shops (812111)]</th> <td>-1199.9681</td> <td> 4421.996</td> <td>   -0.271</td> <td> 0.786</td> <td>-9867.007</td> <td> 7467.071</td>
+<th>C(ind02)[T.Barber shops (812111)]</th> <td>-2074.8232</td> <td> 4386.689</td> <td>   -0.473</td> <td> 0.636</td> <td>-1.07e+04</td> <td> 6523.015</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Beauty salons (812112)]</th> <td> 1135.6788</td> <td> 1777.700</td> <td>    0.639</td> <td> 0.523</td> <td>-2348.585</td> <td> 4619.942</td>
+<th>C(ind02)[T.Beauty salons (812112)]</th> <td>  979.0842</td> <td> 1763.495</td> <td>    0.555</td> <td> 0.579</td> <td>-2477.336</td> <td> 4435.504</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Nail salons and other personal care services (812113, 81219)]</th> <td> -266.8031</td> <td> 2039.847</td> <td>   -0.131</td> <td> 0.896</td> <td>-4264.870</td> <td> 3731.263</td>
+<th>C(ind02)[T.Nail salons and other personal care services (812113, 81219)]</th> <td> -745.4762</td> <td> 2023.570</td> <td>   -0.368</td> <td> 0.713</td> <td>-4711.641</td> <td> 3220.688</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Drycleaning and laundry services (8123)]</th> <td>-2282.7262</td> <td> 2206.938</td> <td>   -1.034</td> <td> 0.301</td> <td>-6608.289</td> <td> 2042.836</td>
+<th>C(ind02)[T.Drycleaning and laundry services (8123)]</th> <td>-3464.6542</td> <td> 2189.435</td> <td>   -1.582</td> <td> 0.114</td> <td>-7755.911</td> <td>  826.602</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Funeral homes, cemeteries, and crematories (8122)]</th> <td>-2626.2434</td> <td> 3135.330</td> <td>   -0.838</td> <td> 0.402</td> <td>-8771.439</td> <td> 3518.952</td>
+<th>C(ind02)[T.Funeral homes, cemeteries, and crematories (8122)]</th> <td>-2246.3796</td> <td> 3110.276</td> <td>   -0.722</td> <td> 0.470</td> <td>-8342.469</td> <td> 3849.710</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other personal services (8129)]</th> <td> -199.1535</td> <td> 2217.891</td> <td>   -0.090</td> <td> 0.928</td> <td>-4546.184</td> <td> 4147.877</td>
+<th>C(ind02)[T.Other personal services (8129)]</th> <td>  366.1246</td> <td> 2200.196</td> <td>    0.166</td> <td> 0.868</td> <td>-3946.223</td> <td> 4678.472</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Religious organizations (8131)]</th> <td>-2863.7055</td> <td> 1488.320</td> <td>   -1.924</td> <td> 0.054</td> <td>-5780.789</td> <td>   53.378</td>
+<th>C(ind02)[T.Religious organizations (8131)]</th> <td>-2519.7490</td> <td> 1476.446</td> <td>   -1.707</td> <td> 0.088</td> <td>-5413.559</td> <td>  374.061</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Civic, social, advocacy organizations, and grantmaking and giving services (8132, 8133, 8134)]</th> <td> 8513.9769</td> <td> 1463.961</td> <td>    5.816</td> <td> 0.000</td> <td> 5644.638</td> <td> 1.14e+04</td>
+<th>C(ind02)[T.Civic, social, advocacy organizations, and grantmaking and giving services (8132, 8133, 8134)]</th> <td> 7920.9857</td> <td> 1452.314</td> <td>    5.454</td> <td> 0.000</td> <td> 5074.474</td> <td> 1.08e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Labor unions (81393)]</th> <td> 1.934e+04</td> <td> 3463.138</td> <td>    5.583</td> <td> 0.000</td> <td> 1.25e+04</td> <td> 2.61e+04</td>
+<th>C(ind02)[T.Labor unions (81393)]</th> <td> 1.847e+04</td> <td> 3435.507</td> <td>    5.377</td> <td> 0.000</td> <td> 1.17e+04</td> <td> 2.52e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Business, professional, political, and similar organizations (8139 exc. 81393)]</th> <td> 1.646e+04</td> <td> 2179.500</td> <td>    7.554</td> <td> 0.000</td> <td> 1.22e+04</td> <td> 2.07e+04</td>
+<th>C(ind02)[T.Business, professional, political, and similar organizations (8139 exc. 81393)]</th> <td> 1.634e+04</td> <td> 2162.084</td> <td>    7.558</td> <td> 0.000</td> <td> 1.21e+04</td> <td> 2.06e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Private households (814)]</th> <td>-3089.5909</td> <td> 1865.765</td> <td>   -1.656</td> <td> 0.098</td> <td>-6746.459</td> <td>  567.277</td>
+<th>C(ind02)[T.Private households (814)]</th> <td>-2844.3465</td> <td> 1850.842</td> <td>   -1.537</td> <td> 0.124</td> <td>-6471.967</td> <td>  783.274</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Executive offices and legislative bodies (92111, 92112, 92114, pt. 92115)]</th> <td> 6798.3444</td> <td> 1320.189</td> <td>    5.150</td> <td> 0.000</td> <td> 4210.797</td> <td> 9385.892</td>
+<th>C(ind02)[T.Executive offices and legislative bodies (92111, 92112, 92114, pt. 92115)]</th> <td> 6340.5873</td> <td> 1309.672</td> <td>    4.841</td> <td> 0.000</td> <td> 3773.653</td> <td> 8907.522</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Public finance activities (92113)]</th> <td> 1.374e+04</td> <td> 1762.387</td> <td>    7.795</td> <td> 0.000</td> <td> 1.03e+04</td> <td> 1.72e+04</td>
+<th>C(ind02)[T.Public finance activities (92113)]</th> <td> 1.295e+04</td> <td> 1748.379</td> <td>    7.407</td> <td> 0.000</td> <td> 9523.134</td> <td> 1.64e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Other general government and support (92119)]</th> <td> 9480.3343</td> <td> 2676.199</td> <td>    3.542</td> <td> 0.000</td> <td> 4235.030</td> <td> 1.47e+04</td>
+<th>C(ind02)[T.Other general government and support (92119)]</th> <td> 8285.9524</td> <td> 2654.931</td> <td>    3.121</td> <td> 0.002</td> <td> 3082.331</td> <td> 1.35e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Justice, public order, and safety activities (922, pt. 92115)]</th> <td> 8924.4905</td> <td> 1197.308</td> <td>    7.454</td> <td> 0.000</td> <td> 6577.787</td> <td> 1.13e+04</td>
+<th>C(ind02)[T.Justice, public order, and safety activities (922, pt. 92115)]</th> <td> 7818.9343</td> <td> 1187.994</td> <td>    6.582</td> <td> 0.000</td> <td> 5490.486</td> <td> 1.01e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Administration of human resource programs (923)]</th> <td> 6796.9979</td> <td> 1359.708</td> <td>    4.999</td> <td> 0.000</td> <td> 4131.992</td> <td> 9462.003</td>
+<th>C(ind02)[T.Administration of human resource programs (923)]</th> <td> 6027.1037</td> <td> 1348.951</td> <td>    4.468</td> <td> 0.000</td> <td> 3383.181</td> <td> 8671.026</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Administration of environmental quality and housing programs (924, 925)]</th> <td> 8922.8101</td> <td> 1751.012</td> <td>    5.096</td> <td> 0.000</td> <td> 5490.855</td> <td> 1.24e+04</td>
+<th>C(ind02)[T.Administration of environmental quality and housing programs (924, 925)]</th> <td> 8003.7043</td> <td> 1737.142</td> <td>    4.607</td> <td> 0.000</td> <td> 4598.936</td> <td> 1.14e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Administration of economic programs and space research (926, 927)]</th> <td>  1.53e+04</td> <td> 1490.058</td> <td>   10.265</td> <td> 0.000</td> <td> 1.24e+04</td> <td> 1.82e+04</td>
+<th>C(ind02)[T.Administration of economic programs and space research (926, 927)]</th> <td> 1.431e+04</td> <td> 1478.316</td> <td>    9.680</td> <td> 0.000</td> <td> 1.14e+04</td> <td> 1.72e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.National security and international affairs (928)]</th> <td> 1.755e+04</td> <td> 1346.175</td> <td>   13.034</td> <td> 0.000</td> <td> 1.49e+04</td> <td> 2.02e+04</td>
+<th>C(ind02)[T.National security and international affairs (928)]</th> <td> 1.648e+04</td> <td> 1335.629</td> <td>   12.340</td> <td> 0.000</td> <td> 1.39e+04</td> <td> 1.91e+04</td>
 </tr>
 <tr>
-<th>C(ind02)[T.Armed Forces]</th> <td>-8.331e-13</td> <td> 6.42e-13</td> <td>   -1.297</td> <td> 0.195</td> <td>-2.09e-12</td> <td> 4.26e-13</td>
+<th>C(ind02)[T.Armed Forces]</th> <td>-3.246e-13</td> <td> 7.43e-13</td> <td>   -0.437</td> <td> 0.662</td> <td>-1.78e-12</td> <td> 1.13e-12</td>
 </tr>
 <tr>
-<th>female</th> <td>-1.086e+04</td> <td>  175.702</td> <td>  -61.815</td> <td> 0.000</td> <td>-1.12e+04</td> <td>-1.05e+04</td>
+<th>female</th> <td>-1.098e+04</td> <td>  174.317</td> <td>  -62.990</td> <td> 0.000</td> <td>-1.13e+04</td> <td>-1.06e+04</td>
 </tr>
 <tr>
-<th>age</th> <td>  431.3093</td> <td>    5.978</td> <td>   72.153</td> <td> 0.000</td> <td>  419.593</td> <td>  443.025</td>
+<th>age</th> <td> 2028.7106</td> <td>   36.386</td> <td>   55.755</td> <td> 0.000</td> <td> 1957.394</td> <td> 2100.027</td>
 </tr>
 <tr>
-<th>age_sq</th> <td>   -0.2084</td> <td>    1.066</td> <td>   -0.195</td> <td> 0.845</td> <td>   -2.298</td> <td>    1.881</td>
+<th>age_sq</th> <td>  -18.1035</td> <td>    0.407</td> <td>  -44.487</td> <td> 0.000</td> <td>  -18.901</td> <td>  -17.306</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-<th>Omnibus:</th> <td>14403.878</td> <th>  Durbin-Watson:     </th> <td>   1.863</td>
+<th>Omnibus:</th> <td>14330.493</td> <th>  Durbin-Watson:     </th> <td>   1.865</td>
 </tr>
 <tr>
-<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>21479.137</td>
+<th>Prob(Omnibus):</th> <td> 0.000</td> <th>  Jarque-Bera (JB):  </th> <td>21302.410</td>
 </tr>
 <tr>
-<th>Skew:</th> <td> 0.874</td> <th>  Prob(JB):          </th> <td>    0.00</td>
+<th>Skew:</th> <td> 0.873</td> <th>  Prob(JB):          </th> <td>    0.00</td>
 </tr>
 <tr>
-<th>Kurtosis:</th> <td> 4.070</td> <th>  Cond. No.          </th> <td>1.27e+16</td>
+<th>Kurtosis:</th> <td> 4.060</td> <th>  Cond. No.          </th> <td>1.16e+16</td>
 </tr>
-</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The smallest eigenvalue is 4.37e-24. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The smallest eigenvalue is 4.93e-21. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.
 </div>
 </div>
 </div>
@@ -9228,8 +9230,8 @@ to be precise average wage per year for women is $ 47312.8, in contrast to men w
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>The effect of industry fixing is $ 2134.31 of fall of the pay gap.
-In terms of percentage change is  16.4%.
+<pre>The effect of industry fixing is $ 2058.31 of fall of the pay gap.
+In terms of percentage change is  15.8%.
 </pre>
 </div>
 </div>
